@@ -37,6 +37,8 @@ public interface MedicineDataSource {
 
     void getMedicineListByDay(int day, LoadMedicineCallbacks callbacks);
 
+    void getMedicineListByDayAndProfile(int day, int userProfileId, LoadMedicineCallbacks callbacks);
+
     boolean medicineExits(String pillName);
 
     List<Long> tempIds();

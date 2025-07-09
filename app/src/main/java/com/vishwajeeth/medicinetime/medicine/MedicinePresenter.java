@@ -32,6 +32,12 @@ public class MedicinePresenter implements MedicineContract.Presenter {
 
     private final MedicineContract.View mMedView;
 
+    private int userProfileId = -1;
+
+    public void setUserProfileId(int userProfileId) {
+        this.userProfileId = userProfileId;
+    }
+
     MedicinePresenter(@NonNull MedicineRepository medicineRepository, @NonNull MedicineContract.View medView) {
         this.mMedicineRepository = medicineRepository;
         this.mMedView = medView;
@@ -40,6 +46,8 @@ public class MedicinePresenter implements MedicineContract.Presenter {
 
     @Override
     public void loadMedicinesByDay(int day, boolean showIndicator) {
+        android.util.Log.d("DEBUG_DB",
+                "MedicinePresenter.loadMedicinesByDay: day=" + day + ", userProfileId=" + userProfileId);
         loadListByDay(day, showIndicator);
     }
 
@@ -74,7 +82,7 @@ public class MedicinePresenter implements MedicineContract.Presenter {
 
     @Override
     public void onStart(int day) {
-        Log.d("TAG", "onStart: " + day);
+        android.util.Log.d("DEBUG_DB", "MedicinePresenter.onStart: day=" + day + ", userProfileId=" + userProfileId);
         loadMedicinesByDay(day, true);
     }
 
@@ -99,36 +107,46 @@ public class MedicinePresenter implements MedicineContract.Presenter {
     private void loadListByDay(int day, final boolean showLoadingUi) {
         if (showLoadingUi)
             mMedView.showLoadingIndicator(true);
+        if (userProfileId > 0) {
+            mMedicineRepository.getMedicineListByDayAndProfile(day, userProfileId,
+                    new MedicineDataSource.LoadMedicineCallbacks() {
+                        @Override
+                        public void onMedicineLoaded(List<MedicineAlarm> medicineAlarmList) {
+                            processMedicineList(medicineAlarmList);
+                            if (!mMedView.isActive()) {
+                                return;
+                            }
+                            if (showLoadingUi) {
+                                mMedView.showLoadingIndicator(false);
+                            }
+                        }
 
-        mMedicineRepository.getMedicineListByDay(day, new MedicineDataSource.LoadMedicineCallbacks() {
-            @Override
-            public void onMedicineLoaded(List<MedicineAlarm> medicineAlarmList) {
-                processMedicineList(medicineAlarmList);
-                // The view may not be able to handle UI updates anymore
-                if (!mMedView.isActive()) {
-                    return;
-                }
-                if (showLoadingUi) {
-                    mMedView.showLoadingIndicator(false);
-                }
+                        @Override
+                        public void onDataNotAvailable() {
+                            if (!mMedView.isActive()) {
+                                return;
+                            }
+                            if (showLoadingUi) {
+                                mMedView.showLoadingIndicator(false);
+                            }
+                            mMedView.showNoMedicine();
+                        }
+                    });
+        } else {
+            // Nếu chưa chọn thành viên, không load thuốc
+            mMedView.showNoMedicine();
+            if (showLoadingUi) {
+                mMedView.showLoadingIndicator(false);
             }
-
-            @Override
-            public void onDataNotAvailable() {
-                if (!mMedView.isActive()) {
-                    return;
-                }
-                if (showLoadingUi) {
-                    mMedView.showLoadingIndicator(false);
-                }
-
-                mMedView.showNoMedicine();
-            }
-        });
+        }
     }
 
     private void processMedicineList(List<MedicineAlarm> medicineAlarmList) {
-
+        android.util.Log.d("DEBUG_DB", "processMedicineList: count=" + medicineAlarmList.size());
+        for (MedicineAlarm alarm : medicineAlarmList) {
+            android.util.Log.d("DEBUG_DB",
+                    "Medicine: " + alarm.getPillName() + ", hour=" + alarm.getHour() + ", minute=" + alarm.getMinute());
+        }
         if (medicineAlarmList.isEmpty()) {
             // Show a message indicating there are no tasks for that filter type.
             mMedView.showNoMedicine();

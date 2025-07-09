@@ -1,11 +1,16 @@
 package com.vishwajeeth.medicinetime.data.source.local;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import java.util.Calendar;
 
 import com.vishwajeeth.medicinetime.data.source.History;
 import com.vishwajeeth.medicinetime.data.source.MedicineAlarm;
 import com.vishwajeeth.medicinetime.data.source.MedicineDataSource;
 import com.vishwajeeth.medicinetime.data.source.Pills;
+import com.vishwajeeth.medicinetime.data.source.local.UserProfile;
 
 import java.net.URISyntaxException;
 import java.util.List;
@@ -20,8 +25,11 @@ public class MedicinesLocalDataSource implements MedicineDataSource {
 
     private MedicineDBHelper mDbHelper;
 
+    private Context context;
+
     private MedicinesLocalDataSource(Context context) {
         mDbHelper = new MedicineDBHelper(context);
+        this.context = context;
     }
 
     public static MedicinesLocalDataSource getInstance(Context context) {
@@ -56,7 +64,45 @@ public class MedicinesLocalDataSource implements MedicineDataSource {
 
     @Override
     public void saveMedicine(MedicineAlarm medicineAlarm, Pills pill) {
-        mDbHelper.createAlarm(medicineAlarm, pill.getPillId());
+        android.util.Log.d("DEBUG_DB", "MedicinesLocalDataSource.saveMedicine: pill=" + pill.getPillName()
+                + ", userProfileId=" + pill.userProfileId);
+        long pillId = mDbHelper.createPill(pill); // Lưu pill mới và lấy id
+        pill.setPillId(pillId);
+        long[] alarmIds = mDbHelper.createAlarm(medicineAlarm, pillId);
+
+        // Đặt báo thức cho từng alarmId
+        for (int i = 0; i < alarmIds.length; i++) {
+            if (alarmIds[i] == 0)
+                continue;
+            Calendar calendar = Calendar.getInstance();
+            calendar.set(Calendar.HOUR_OF_DAY, medicineAlarm.getHour());
+            calendar.set(Calendar.MINUTE, medicineAlarm.getMinute());
+            calendar.set(Calendar.SECOND, 0);
+            calendar.set(Calendar.MILLISECOND, 0);
+            // Nếu thời gian đã qua thì đặt cho ngày hôm sau
+            if (calendar.getTimeInMillis() < System.currentTimeMillis()) {
+                calendar.add(Calendar.DAY_OF_YEAR, 1);
+            }
+            // Lấy tên thành viên từ userProfileId
+            String memberName = "";
+            List<UserProfile> profiles = mDbHelper.getAllUserProfiles();
+            for (UserProfile profile : profiles) {
+                if (profile.id == pill.userProfileId) {
+                    memberName = profile.name;
+                    break;
+                }
+            }
+            Intent intent = new Intent(context, com.vishwajeeth.medicinetime.alarm.AlarmReceiver.class);
+            intent.putExtra("pillName", pill.getPillName());
+            intent.putExtra("userProfileId", pill.userProfileId);
+            intent.putExtra("memberName", memberName);
+            intent.putExtra("time", medicineAlarm.getHour() + ":" + medicineAlarm.getMinute());
+            intent.putExtra("alarmId", (int) alarmIds[i]);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, (int) alarmIds[i], intent,
+                    PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
+            AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            alarmManager.setExact(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        }
     }
 
     @Override
@@ -163,6 +209,15 @@ public class MedicinesLocalDataSource implements MedicineDataSource {
 
     public int getDayOfWeek(long alarm_id) throws URISyntaxException {
         return mDbHelper.getDayOfWeek(alarm_id);
+    }
+
+    public List<Pills> getPillsByProfile(int userProfileId) {
+        return mDbHelper.getPillsByProfile(userProfileId);
+    }
+
+    public void getMedicineListByDayAndProfile(int day, int userProfileId, LoadMedicineCallbacks callbacks) {
+        List<MedicineAlarm> medicineAlarmList = mDbHelper.getAlarmsByDayAndProfile(day, userProfileId);
+        callbacks.onMedicineLoaded(medicineAlarmList);
     }
 
 }

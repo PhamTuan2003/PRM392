@@ -39,6 +39,9 @@
         <activity 
             android:name=".report.MonthlyReportActivity"
             android:exported="false" />
+        <activity android:name=".profile.ProfileManagerActivity" />
+        <activity android:name=".profile.AddEditProfileActivity" />
+        <receiver android:name=".alarm.AlarmReceiver" android:exported="false" />
     </application>
 
 </manifest>

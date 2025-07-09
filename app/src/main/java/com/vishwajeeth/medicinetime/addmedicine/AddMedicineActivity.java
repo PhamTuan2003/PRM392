@@ -9,6 +9,9 @@ import androidx.appcompat.widget.Toolbar;
 import com.vishwajeeth.medicinetime.Injection;
 import com.vishwajeeth.medicinetime.R;
 import com.vishwajeeth.medicinetime.utils.ActivityUtils;
+import com.vishwajeeth.medicinetime.data.source.local.MedicineDBHelper;
+import com.vishwajeeth.medicinetime.data.source.Pills;
+import android.widget.Toast;
 
 public class AddMedicineActivity extends AppCompatActivity {
 
@@ -28,20 +31,20 @@ public class AddMedicineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
 
-        //Setup toolbar
+        // Setup toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);
         mActionBar.setDisplayShowHomeEnabled(true);
 
-        AddMedicineFragment addMedicineFragment = (AddMedicineFragment) getSupportFragmentManager().findFragmentById(R.id.contentFrame);
+        AddMedicineFragment addMedicineFragment = (AddMedicineFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.contentFrame);
 
-        int medId = getIntent().getIntExtra(AddMedicineFragment.ARGUMENT_EDIT_MEDICINE_ID,0);
+        int medId = getIntent().getIntExtra(AddMedicineFragment.ARGUMENT_EDIT_MEDICINE_ID, 0);
         String medName = getIntent().getStringExtra(AddMedicineFragment.ARGUMENT_EDIT_MEDICINE_NAME);
 
         setToolbarTitle(medName);
-
 
         if (addMedicineFragment == null) {
             addMedicineFragment = AddMedicineFragment.newInstance();
@@ -56,13 +59,15 @@ public class AddMedicineActivity extends AppCompatActivity {
         }
 
         boolean shouldLoadDataFromRepo = true;
-        // Prevent the presenter from loading data from the repository if this is a config change.
+        // Prevent the presenter from loading data from the repository if this is a
+        // config change.
         if (savedInstanceState != null) {
-            // Data might not have loaded when the config change happen, so we saved the state.
+            // Data might not have loaded when the config change happen, so we saved the
+            // state.
             shouldLoadDataFromRepo = savedInstanceState.getBoolean(SHOULD_LOAD_DATA_FROM_REPO_KEY);
         }
 
-//        // Create the presenter
+        // // Create the presenter
         mAddMedicinePresenter = new AddMedicinePresenter(
                 medId,
                 Injection.provideMedicineRepository(getApplicationContext()),
@@ -89,5 +94,21 @@ public class AddMedicineActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    private void saveMedicine() {
+        // Đã xóa toàn bộ đoạn kiểm tra và sử dụng biến tenThuoc trong hàm saveMedicine.
+        int userProfileId = getSharedPreferences("MedicineApp", MODE_PRIVATE).getInt("current_profile_id", -1);
+        if (userProfileId == -1) {
+            Toast.makeText(this, "Vui lòng chọn thành viên trước khi thêm thuốc!", Toast.LENGTH_LONG).show();
+            return;
+        }
+        // Khi tạo Pills mới, truyền userProfileId vào constructor hoặc set vào object
+        Pills pill = new Pills();
+        // Đã xóa dòng: pill.setPillName(tenThuoc); // tenThuoc là tên thuốc nhập từ UI
+        // ... các trường khác nếu có ...
+        // Lưu userProfileId vào bảng pills
+        MedicineDBHelper dbHelper = new MedicineDBHelper(this);
+        dbHelper.createPillWithProfile(pill.getPillName(), userProfileId);
     }
 }

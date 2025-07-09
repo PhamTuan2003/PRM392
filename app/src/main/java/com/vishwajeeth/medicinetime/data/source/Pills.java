@@ -16,6 +16,8 @@ public class Pills {
 
     private List<MedicineAlarm> medicineAlarms = new LinkedList<MedicineAlarm>();
 
+    public int userProfileId; // Foreign key đến UserProfile
+
     public Pills() {
 
     }

@@ -1,6 +1,7 @@
 package com.vishwajeeth.medicinetime.addmedicine;
 
 import androidx.annotation.NonNull;
+import android.util.Log;
 
 import com.vishwajeeth.medicinetime.data.source.MedicineAlarm;
 import com.vishwajeeth.medicinetime.data.source.MedicineDataSource;
@@ -44,7 +45,10 @@ public class AddMedicinePresenter implements AddMedicineContract.Presenter, Medi
 
     @Override
     public void saveMedicine(MedicineAlarm alarm, Pills pills) {
+        Log.d("AddMedicinePresenter",
+                "Saving medicine: " + alarm.getPillName() + ", ProfileId: " + pills.userProfileId);
         mMedicineRepository.saveMedicine(alarm, pills);
+        mAddMedicineView.showMedicineList();
     }
 
     @Override

@@ -14,8 +14,12 @@
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/mockDebugAndroidTest/compileMockDebugAndroidTestJavaWithJavac/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/mockDebugAndroidTest/out" />
-    <content url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/mock/debug" />
+    <content url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/mockDebugAndroidTest/out">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/ap_generated_sources/mockDebugAndroidTest/out" isTestSource="true" generated="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/mock/debug">
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/mock/debug" type="java-test-resource" />
+    </content>
     <content url="file://$MODULE_DIR$/../../../app/src/androidTest">
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/androidTest/java" isTestSource="true" />
     </content>
@@ -24,7 +28,7 @@
     <content url="file://$MODULE_DIR$/../../../app/src/androidTestMockDebug" />
     <orderEntry type="jdk" jdkName="Android API 34, extension level 7 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Medicine-Time-Android-App-Project-master.app.main" scope="TEST" />
+    <orderEntry type="module" module-name="Android-App-Project.app.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test.ext:junit:1.1.5@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:core:1.5.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.test:monitor:1.6.1@aar" level="project" />
@@ -99,5 +103,5 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.collection:collection:1.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.resourceinspection:resourceinspection-annotation:1.0.1" level="project" />
   </component>
-  <component name="TestModuleProperties" production-module="Medicine-Time-Android-App-Project-master.app.main" />
+  <component name="TestModuleProperties" production-module="Android-App-Project.app.main" />
 </module>

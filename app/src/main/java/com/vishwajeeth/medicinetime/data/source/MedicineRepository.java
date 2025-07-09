@@ -117,4 +117,18 @@ public class MedicineRepository implements MedicineDataSource {
     public void saveToHistory(History history) {
         localDataSource.saveToHistory(history);
     }
+
+    public void getMedicineListByDayAndProfile(int day, int userProfileId, final LoadMedicineCallbacks callbacks) {
+        localDataSource.getMedicineListByDayAndProfile(day, userProfileId, new LoadMedicineCallbacks() {
+            @Override
+            public void onMedicineLoaded(List<MedicineAlarm> medicineAlarmList) {
+                callbacks.onMedicineLoaded(medicineAlarmList);
+            }
+
+            @Override
+            public void onDataNotAvailable() {
+                callbacks.onDataNotAvailable();
+            }
+        });
+    }
 }

@@ -55,4 +55,17 @@
         <item>fri</item>
         <item>sat</item>
     </array>
+    <string-array name="relation_types">
+        <item>Bố</item>
+        <item>Mẹ</item>
+        <item>Con trai</item>
+        <item>Con gái</item>
+        <item>Ông</item>
+        <item>Bà</item>
+        <item>Anh</item>
+        <item>Chị</item>
+        <item>Em trai</item>
+        <item>Em gái</item>
+        <item>Khác</item>
+    </string-array>
 </resources>

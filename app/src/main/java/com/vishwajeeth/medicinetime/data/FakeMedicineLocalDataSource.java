@@ -126,6 +126,11 @@ public class FakeMedicineLocalDataSource implements MedicineDataSource {
     }
 
     @Override
+    public void getMedicineListByDayAndProfile(int day, int userProfileId, LoadMedicineCallbacks callbacks) {
+        callbacks.onMedicineLoaded(new ArrayList<>(MEDICINE_SERVICE_DATA.values()));
+    }
+
+    @Override
     public boolean medicineExits(String pillName) {
         return false;
     }

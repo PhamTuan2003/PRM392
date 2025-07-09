@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import android.widget.Button;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ import com.vishwajeeth.medicinetime.databinding.FragmentAddMedicineBinding;
 
 import java.util.Arrays;
 import java.util.List;
-
+import android.util.Log;
 
 /**
  * Add Medicine Fragment
@@ -48,9 +48,7 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        FloatingActionButton fab = requireActivity().findViewById(R.id.fab_edit_task_done);
-        fab.setImageResource(R.drawable.ic_done);
-        fab.setOnClickListener(setClickListener);
+        // Không cần FloatingActionButton nữa
     }
 
     @Nullable
@@ -60,6 +58,7 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
         setupViews();
         setCurrentTime();
         setSpinnerDoseUnits();
+        binding.btnSaveMedicine.setOnClickListener(v -> saveMedicine());
         return binding.getRoot();
     }
 
@@ -224,15 +223,6 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
         binding.spinnerDoseUnits.setAdapter(adapter);
     }
 
-    private View.OnClickListener setClickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            if (v.getId() == R.id.fab_edit_task_done) {
-                saveMedicine();
-            }
-        }
-    };
-
     private void saveMedicine() {
         String medicineName = binding.editMedName.getText().toString();
         String doseQuantity = binding.tvDoseQuantity.getText().toString();
@@ -248,10 +238,24 @@ public class AddMedicineFragment extends Fragment implements AddMedicineContract
 
         boolean[] days = dayOfWeekList.clone();
 
+        // Lấy userProfileId đang chọn
+        int userProfileId = requireActivity().getSharedPreferences("MedicineApp", android.content.Context.MODE_PRIVATE)
+                .getInt("current_profile_id", -1);
+        Log.d("DEBUG_ADD_MED", "UserProfileId: " + userProfileId);
+        if (userProfileId == -1) {
+            android.widget.Toast.makeText(getContext(), "Vui lòng chọn thành viên trước khi thêm thuốc!",
+                    android.widget.Toast.LENGTH_LONG).show();
+            return;
+        }
+
         // Tạo Pills bằng constructor rỗng
         Pills pills = new Pills();
         pills.setPillName(medicineName);
-        // Nếu có pillId thì set luôn, còn không thì bỏ qua
+        // Gắn userProfileId vào pills (nếu Pills có trường này, hoặc truyền vào DB khi
+        // lưu)
+        // pills.setUserProfileId(userProfileId); // Nếu có setter
+        pills.userProfileId = userProfileId; // Nếu public field
+        Log.d("DEBUG_ADD_MED", "Created Pills: " + pills.getPillName() + ", ProfileId: " + pills.userProfileId);
 
         // Tạo MedicineAlarm và set các thuộc tính
         MedicineAlarm alarm = new MedicineAlarm();

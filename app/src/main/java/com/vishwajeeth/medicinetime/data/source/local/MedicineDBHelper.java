@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.vishwajeeth.medicinetime.data.source.History;
 import com.vishwajeeth.medicinetime.data.source.MedicineAlarm;
 import com.vishwajeeth.medicinetime.data.source.Pills;
+import com.vishwajeeth.medicinetime.data.source.local.UserProfile;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     /**
      * Database name
      */
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
 
     /**
      * Database version
@@ -38,6 +39,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     private static final String ALARM_TABLE = "alarms";
     private static final String PILL_ALARM_LINKS = "pill_alarm";
     private static final String HISTORIES_TABLE = "histories";
+    private static final String USER_PROFILE_TABLE = "user_profiles";
 
     /**
      * Common column name and location
@@ -48,6 +50,15 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
      * Pill table columns, used by History Table
      */
     private static final String KEY_PILLNAME = "pillName";
+
+    /**
+     * User Profile table columns
+     */
+    private static final String KEY_PROFILE_ID = "id";
+    private static final String KEY_PROFILE_NAME = "name";
+    private static final String KEY_PROFILE_AGE = "age";
+    private static final String KEY_PROFILE_RELATION = "relation";
+    private static final String KEY_PROFILE_AVATAR = "avatarUri";
 
     /**
      * Alarm table columns, Hour & Minute used by History Table
@@ -78,7 +89,9 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
      */
     private static final String CREATE_PILL_TABLE = "create table " + PILL_TABLE + "("
             + KEY_ROWID + " integer primary key not null,"
-            + KEY_PILLNAME + " text not null" + ")";
+            + KEY_PILLNAME + " text not null,"
+            + "userProfileId integer" +
+            ")";
 
     /**
      * Alarm Table: create statement
@@ -111,6 +124,17 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
             KEY_ACTION, KEY_MINUTE, KEY_ALARM_ID);
 
     /**
+     * User Profile Table: create statement
+     */
+    private static final String CREATE_USER_PROFILE_TABLE = "CREATE TABLE " + USER_PROFILE_TABLE + "(" +
+            KEY_PROFILE_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            KEY_PROFILE_NAME + " TEXT NOT NULL," +
+            KEY_PROFILE_AGE + " INTEGER," +
+            KEY_PROFILE_RELATION + " TEXT," +
+            KEY_PROFILE_AVATAR + " TEXT" +
+            ")";
+
+    /**
      * Constructor
      */
     public MedicineDBHelper(Context context) {
@@ -120,6 +144,8 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     @Override
     /** Creating tables */
     public void onCreate(SQLiteDatabase db) {
+        android.util.Log.d("DEBUG_DB", "onCreate: Creating database, version=" + DATABASE_VERSION);
+        db.execSQL(CREATE_USER_PROFILE_TABLE);
         db.execSQL(CREATE_PILL_TABLE);
         db.execSQL(CREATE_ALARM_TABLE);
         db.execSQL(CREATE_PILL_ALARM_LINKS_TABLE);
@@ -129,6 +155,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
     @Override
     // TODO: change this so that updating doesn't delete old data
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + USER_PROFILE_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + PILL_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + ALARM_TABLE);
         db.execSQL("DROP TABLE IF EXISTS " + PILL_ALARM_LINKS);
@@ -151,7 +178,16 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
 
         ContentValues values = new ContentValues();
         values.put(KEY_PILLNAME, pill.getPillName());
-        return db.insert(PILL_TABLE, null, values);
+        values.put("userProfileId", pill.userProfileId);
+        long result = -1;
+        try {
+            result = db.insert(PILL_TABLE, null, values);
+            android.util.Log.d("DEBUG_DB", "createPill: name=" + pill.getPillName() + ", userProfileId="
+                    + pill.userProfileId + ", resultRowId=" + result);
+        } catch (Exception e) {
+            android.util.Log.e("DEBUG_DB", "createPill ERROR: " + e.getMessage());
+        }
+        return result;
     }
 
     /**
@@ -257,6 +293,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
         if (c.moveToFirst() && c.getCount() >= 1) {
             pill.setPillName(c.getString(c.getColumnIndex(KEY_PILLNAME)));
             pill.setPillId(c.getLong(c.getColumnIndex(KEY_ROWID)));
+            pill.userProfileId = c.getInt(c.getColumnIndex("userProfileId"));
             c.close();
         }
         return pill;
@@ -280,6 +317,7 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
                 Pills p = new Pills();
                 p.setPillName(c.getString(c.getColumnIndex(KEY_PILLNAME)));
                 p.setPillId(c.getLong(c.getColumnIndex(KEY_ROWID)));
+                p.userProfileId = c.getInt(c.getColumnIndex("userProfileId"));
 
                 pills.add(p);
             } while (c.moveToNext());
@@ -408,6 +446,35 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
         }
         c.close();
 
+        return daysAlarms;
+    }
+
+    public List<MedicineAlarm> getAlarmsByDayAndProfile(int day, int userProfileId) {
+        List<MedicineAlarm> daysAlarms = new ArrayList<>();
+        String selectQuery = "SELECT alarm.* FROM " +
+                ALARM_TABLE + " alarm " +
+                "INNER JOIN " + PILL_TABLE + " pill ON alarm.pillName = pill.pillName " +
+                "WHERE alarm." + KEY_DAY_WEEK + " = '" + day + "' " +
+                "AND pill.userProfileId = '" + userProfileId + "'";
+        android.util.Log.d("DEBUG_DB", "getAlarmsByDayAndProfile SQL: " + selectQuery);
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+        if (c.moveToFirst()) {
+            do {
+                MedicineAlarm al = new MedicineAlarm();
+                al.setId(c.getInt(c.getColumnIndex(KEY_ROWID)));
+                al.setHour(c.getInt(c.getColumnIndex(KEY_HOUR)));
+                al.setMinute(c.getInt(c.getColumnIndex(KEY_MINUTE)));
+                al.setPillName(c.getString(c.getColumnIndex(KEY_ALARMS_PILL_NAME)));
+                al.setDoseQuantity(c.getString(c.getColumnIndex(KEY_DOSE_QUANTITY)));
+                al.setDoseUnit(c.getString(c.getColumnIndex(KEY_DOSE_UNITS)));
+                al.setDateString(c.getString(c.getColumnIndex(KEY_DATE_STRING)));
+                al.setAlarmId(c.getInt(c.getColumnIndex(KEY_ALARM_ID)));
+                daysAlarms.add(al);
+            } while (c.moveToNext());
+        }
+        c.close();
+        android.util.Log.d("DEBUG_DB", "getAlarmsByDayAndProfile: result count=" + daysAlarms.size());
         return daysAlarms;
     }
 
@@ -577,5 +644,82 @@ public class MedicineDBHelper extends SQLiteOpenHelper {
         /** Then delete Pill */
         db.delete(PILL_TABLE, KEY_PILLNAME
                 + " = ?", new String[] { pillName });
+    }
+
+    public long insertUserProfile(String name, Integer age, String relation, String avatarUri) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_PROFILE_NAME, name);
+        if (age != null)
+            values.put(KEY_PROFILE_AGE, age);
+        values.put(KEY_PROFILE_RELATION, relation);
+        values.put(KEY_PROFILE_AVATAR, avatarUri);
+        return db.insert(USER_PROFILE_TABLE, null, values);
+    }
+
+    // Lấy danh sách tất cả profile
+    public List<UserProfile> getAllUserProfiles() {
+        List<UserProfile> profiles = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(USER_PROFILE_TABLE, null, null, null, null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                UserProfile profile = new UserProfile();
+                profile.id = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_PROFILE_ID));
+                profile.name = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PROFILE_NAME));
+                if (!cursor.isNull(cursor.getColumnIndexOrThrow(KEY_PROFILE_AGE)))
+                    profile.age = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_PROFILE_AGE));
+                profile.relation = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PROFILE_RELATION));
+                profile.avatarUri = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PROFILE_AVATAR));
+                profiles.add(profile);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        return profiles;
+    }
+
+    // Cập nhật profile
+    public int updateUserProfile(UserProfile profile) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_PROFILE_NAME, profile.name);
+        values.put(KEY_PROFILE_AGE, profile.age);
+        values.put(KEY_PROFILE_RELATION, profile.relation);
+        values.put(KEY_PROFILE_AVATAR, profile.avatarUri);
+        return db.update(USER_PROFILE_TABLE, values, KEY_PROFILE_ID + "=?",
+                new String[] { String.valueOf(profile.id) });
+    }
+
+    // Xóa profile
+    public int deleteUserProfile(int profileId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(USER_PROFILE_TABLE, KEY_PROFILE_ID + "=?", new String[] { String.valueOf(profileId) });
+    }
+
+    // Thêm thuốc gắn với userProfileId
+    public long createPillWithProfile(String pillName, int userProfileId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_PILLNAME, pillName);
+        values.put("userProfileId", userProfileId);
+        return db.insert(PILL_TABLE, null, values);
+    }
+
+    // Lấy danh sách thuốc theo userProfileId
+    public List<Pills> getPillsByProfile(int userProfileId) {
+        List<Pills> pillsList = new ArrayList<>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(PILL_TABLE, null, "userProfileId=?", new String[] { String.valueOf(userProfileId) },
+                null, null, null);
+        if (cursor != null && cursor.moveToFirst()) {
+            do {
+                Pills pill = new Pills();
+                pill.setPillId(cursor.getLong(cursor.getColumnIndexOrThrow(KEY_ROWID)));
+                pill.setPillName(cursor.getString(cursor.getColumnIndexOrThrow(KEY_PILLNAME)));
+                pillsList.add(pill);
+            } while (cursor.moveToNext());
+            cursor.close();
+        }
+        return pillsList;
     }
 }
