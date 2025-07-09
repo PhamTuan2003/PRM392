@@ -11,6 +11,7 @@ import android.os.Build;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import com.vishwajeeth.medicinetime.R;
+import android.util.Log;
 
 public class AlarmReceiver extends BroadcastReceiver {
         @Override
@@ -20,6 +21,9 @@ public class AlarmReceiver extends BroadcastReceiver {
                 String memberName = intent.getStringExtra("memberName");
                 String time = intent.getStringExtra("time");
                 int alarmId = intent.getIntExtra("alarmId", 0);
+
+                android.util.Log.d("DEBUG_ALARM",
+                                "AlarmReceiver onReceive! memberName=" + memberName + ", pillName=" + pillName);
 
                 // Tạo notification channel nếu cần
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

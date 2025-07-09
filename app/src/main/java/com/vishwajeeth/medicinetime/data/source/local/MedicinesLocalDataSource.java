@@ -4,6 +4,8 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.provider.Settings;
 import java.util.Calendar;
 
 import com.vishwajeeth.medicinetime.data.source.History;
@@ -74,6 +76,18 @@ public class MedicinesLocalDataSource implements MedicineDataSource {
         for (int i = 0; i < alarmIds.length; i++) {
             if (alarmIds[i] == 0)
                 continue;
+            // Kiểm tra quyền với Android 12+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                if (!alarmManager.canScheduleExactAlarms()) {
+                    Intent permIntent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                    permIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(permIntent);
+                    android.util.Log.e("DEBUG_DB",
+                            "App chưa có quyền SCHEDULE_EXACT_ALARM, hãy cấp quyền trong Settings!");
+                    return;
+                }
+            }
             Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.HOUR_OF_DAY, medicineAlarm.getHour());
             calendar.set(Calendar.MINUTE, medicineAlarm.getMinute());
