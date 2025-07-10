@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "856735846008",
+    "firebase_url": "https://prm392-spendsmart-default-rtdb.firebaseio.com",
+    "project_id": "prm392-spendsmart",
+    "storage_bucket": "prm392-spendsmart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856735846008:android:5c9391c1b884952977a78d",
+        "android_client_info": {
+          "package_name": "com.example.spendsmart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856735846008-cf00va8tbt3dnvek43ddqr4v3n08ippd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spendsmart",
+            "certificate_hash": "87e6b36b162f41f84b680e008c66e19f3b8b8d92"
+          }
+        },
+        {
+          "client_id": "856735846008-ov0ms0uja1peddib18cf6pe5tmra09dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4aReXnndBYc6NsRFI_zhmH4Aqj0FSYa8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856735846008-ov0ms0uja1peddib18cf6pe5tmra09dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

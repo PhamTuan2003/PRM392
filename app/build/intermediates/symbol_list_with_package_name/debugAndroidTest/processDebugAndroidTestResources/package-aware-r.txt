@@ -1,0 +1,3 @@
+com.example.spendsmart.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

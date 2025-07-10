@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundBlack">#212121</color>
+    <color name="backgroundPrimary">#FFFFFF</color>
+    <color name="colorAccent">#0104F5</color>
+    <color name="colorPrimary">#0099CC</color>
+    <color name="colorPrimaryDark">#0099CC</color>
+    <color name="divider_color">#9e9e9e</color>
+    <color name="errorColor">#F00900</color>
+    <color name="gauge_expense">#F00900</color>
+    <color name="gauge_gray">#808080</color>
+    <color name="gauge_income">#009F75</color>
+    <color name="gauge_white">#FFFFFF</color>
+    <color name="help_text_material_light">#9b9b9b</color>
+    <color name="hint_foreground_material_dark">#00000000</color>
+    <color name="hint_foreground_material_light">#00000000</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="primary_text_expense">#F00900</color>
+    <color name="primary_text_income">#009F75</color>
+    <color name="primary_text_material_light">#000000</color>
+    <color name="secondary_text_material_light">#8a000000</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <integer name="animation_duration">300</integer>
+    <integer name="animation_duration_exit">200 </integer>
+    <string name="app_name">Spend Smart</string>
+    <string name="default_web_client_id" translatable="false">856735846008-ov0ms0uja1peddib18cf6pe5tmra09dc.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://prm392-spendsmart-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">856735846008</string>
+    <string name="google_api_key" translatable="false">AIzaSyC4aReXnndBYc6NsRFI_zhmH4Aqj0FSYa8</string>
+    <string name="google_app_id" translatable="false">1:856735846008:android:5c9391c1b884952977a78d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC4aReXnndBYc6NsRFI_zhmH4Aqj0FSYa8</string>
+    <string name="google_storage_bucket" translatable="false">prm392-spendsmart.appspot.com</string>
+    <string name="pref_key_counter_period">counter_period</string>
+    <string name="pref_key_counter_type">counter_type</string>
+    <string name="pref_key_currency">currencyHelper</string>
+    <string name="pref_key_custom_categories">custom_categories</string>
+    <string name="pref_key_first_month_day">first_month_day</string>
+    <string name="pref_key_first_week_day">first_week_day</string>
+    <string name="pref_key_limit">limit</string>
+    <string name="pref_key_logout">logout</string>
+    <string name="pref_key_policy">privacy_policy</string>
+    <string name="project_id" translatable="false">prm392-spendsmart</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <style name="MaterialTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+    <style name="SplashTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="actionMenuTextColor">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorPrimary</item>
+    </style>
+    <declare-styleable name="CustomGauge">
+        <attr format="integer" name="gaugePointSize"/>
+        <attr format="color" name="gaugePointStartColor"/>
+        <attr format="color" name="gaugePointEndColor"/>
+        <attr format="color" name="gaugeStrokeColor"/>
+        <attr format="dimension" name="gaugeStrokeWidth"/>
+        <attr format="string" name="gaugeStrokeCap"/>
+        <attr format="integer" name="gaugeStartAngle"/>
+        <attr format="integer" name="gaugeSweepAngle"/>
+        <attr format="integer" name="gaugeStartValue"/>
+        <attr format="integer" name="gaugeEndValue"/>
+        <attr format="integer" name="gaugeDividerSize"/>
+        <attr format="color" name="gaugeDividerColor"/>
+        <attr format="integer" name="gaugeDividerStep"/>
+        <attr format="boolean" name="gaugeDividerDrawFirst"/>
+        <attr format="boolean" name="gaugeDividerDrawLast"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,5 @@
+com.example.spendsmart.test.app-jetified-core-1.6.1-0 C:\Users\ADMIN\.gradle\caches\transforms-4\b2c4437080da0d3dd18c95935edf9237\transformed\jetified-core-1.6.1\res
+com.example.spendsmart.test.app-androidTest-1 D:\pppppppppppppppppppp\SpendSmartApplication-main\SpendSmart\app\build\generated\res\resValues\androidTest\debug
+com.example.spendsmart.test.app-mergeDebugAndroidTestResources-2 D:\pppppppppppppppppppp\SpendSmartApplication-main\SpendSmart\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.spendsmart.test.app-mergeDebugAndroidTestResources-3 D:\pppppppppppppppppppp\SpendSmartApplication-main\SpendSmart\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.spendsmart.test.app-debugAndroidTest-4 D:\pppppppppppppppppppp\SpendSmartApplication-main\SpendSmart\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

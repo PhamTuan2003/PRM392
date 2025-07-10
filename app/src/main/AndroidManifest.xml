@@ -1,47 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.spendsmart">
 
     <application
-        android:name=".MedicineApp"
+        android:name="com.example.spendsmart.FirebaseHandler"
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"
-        tools:targetApi="31">
-        <activity 
-            android:name=".SplashActivity"
+        android:theme="@style/MaterialTheme">
+        <activity
+            android:name="com.example.spendsmart.ui.splash_screen.SplashActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/SplashTheme"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity 
-            android:name=".medicine.MedicineActivity"
-            android:exported="false" />
-        <activity 
-            android:name=".addmedicine.AddMedicineActivity"
-            android:exported="false" />
-        <activity 
-            android:name=".alarm.ReminderActivity"
-            android:exported="false" />
-        <activity 
-            android:name=".report.MonthlyReportActivity"
-            android:exported="false" />
-        <activity android:name=".profile.ProfileManagerActivity" />
-        <activity android:name=".profile.AddEditProfileActivity" />
-        <receiver android:name=".alarm.AlarmReceiver" android:exported="false" />
+        <activity
+            android:name="com.example.spendsmart.ui.signin.SignInActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.spendsmart.ui.main.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name="com.example.spendsmart.ui.add_entry.AddWalletEntryActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.spendsmart.ui.main.MainActivity" />
+        </activity>
+        <activity android:name="com.example.spendsmart.ui.options.OptionsActivity"
+            android:configChanges="orientation|screenSize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.spendsmart.ui.main.MainActivity" />
+        </activity>
+        <activity android:name="com.example.spendsmart.ui.main.history.edit_entry.EditWalletEntryActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.spendsmart.ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.spendsmart.ui.options.categories.CustomCategoriesActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.example.spendsmart.ui.options.categories.AddCustomCategoryActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="com.example.spendsmart.ui.options.categories.EditCustomCategoryActivity"
+            android:configChanges="orientation|screenSize"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>

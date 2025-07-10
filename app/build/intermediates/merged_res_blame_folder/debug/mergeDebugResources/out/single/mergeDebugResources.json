@@ -1,0 +1,274 @@
+[
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_options.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/icon_options.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_counter_type_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_counter_type_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_signin.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_signin.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_first_day_of_month_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_first_day_of_month_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_history.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/fragment_history.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_default.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_default.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_edit_custom_category.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_edit_custom_category.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/menu_statistics_fragment_menu.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/menu/statistics_fragment_menu.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_income_expenses_comparasion_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/income_expenses_comparasion_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-xxhdpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-xxhdpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gaming.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_gaming.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_calendar.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/icon_calendar.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_options.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_options.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_history_listview_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/history_listview_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-hdpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-hdpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_transfer.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_transfer.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_kids.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_kids.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_statistics.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/fragment_statistics.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_add_wallet_entry.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_add_wallet_entry.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-xhdpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-xhdpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_sport.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_sport.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_home.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_home.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/menu_history_fragment_menu.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/menu/history_fragment_menu.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_baseline_add_white_18dp.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/baseline_add_white_18dp.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_food.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_food.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_new_entry_type_spinner_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/new_entry_type_spinner_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_transport.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_transport.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_money_icon.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/money_icon.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_background_circle.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/icon_background_circle.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_counter_period_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_counter_period_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_pharmacy.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_pharmacy.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_favorites_listview_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/favorites_listview_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_test.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/test.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_edit_wallet_entry.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_edit_wallet_entry.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_repair.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_repair.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_home.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/anim_hold.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/anim/hold.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-ldpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-ldpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_options.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/fragment_options.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_first_day_of_week_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_first_day_of_week_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_shopping.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_shopping.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_calendar_active.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/icon_calendar_active.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_background_splash.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/background_splash.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-xxxhdpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-xxxhdpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_holidays.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_holidays.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-mdpi_logo.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-mdpi/logo.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_top_categories_statistics_listview_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/top_categories_statistics_listview_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_currency_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_currency_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gas_station.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_gas_station.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/menu_home_fragment_menu.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/menu/home_fragment_menu.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_clothing.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_clothing.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_custom_categories_listview_row.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/custom_categories_listview_row.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_main_menu.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_main_menu.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_custom_categories.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_custom_categories.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/xml_app_preferences.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/xml/app_preferences.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gift.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_gift.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_add_custom_category.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/activity_add_custom_category.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_content_main_menu.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/content_main_menu.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.spendsmart.app-main-50:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/layout_set_limit_dialog.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/layout/set_limit_dialog.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/transition_changebounds_with_arcmotion.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/transition/changebounds_with_arcmotion.xml"
+    },
+    {
+        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_briefcase.xml.flat",
+        "source": "com.example.spendsmart.app-main-50:/drawable/category_briefcase.xml"
+    }
+]
