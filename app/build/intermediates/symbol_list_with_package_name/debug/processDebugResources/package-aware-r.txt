@@ -2296,6 +2296,8 @@ dimen abc_text_size_subhead_material
 dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen browser_actions_context_menu_max_width
 dimen browser_actions_context_menu_min_padding
@@ -2997,6 +2999,8 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen no_friends_margin_top
+dimen no_friends_text_size
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -3012,7 +3016,18 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen recycler_margin_side
+dimen recycler_margin_top
+dimen search_height
+dimen search_margin_top
+dimen search_padding_end
+dimen search_padding_start
 dimen sliding_pane_detail_pane_width
+dimen toolbar_height
+dimen toolbar_icon_margin_end
+dimen toolbar_icon_size
+dimen toolbar_text_margin_start
+dimen toolbar_text_size
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -3505,6 +3520,7 @@ id etChangeName
 id etConfirmPassword
 id etEmailDisplay
 id etNewPassword
+id etOldPassword
 id et_scheduled_message
 id exitUntilCollapsed
 id expand_activities_button
@@ -3731,6 +3747,7 @@ id right
 id rightToLeft
 id right_icon
 id right_side
+id rootLayout
 id rounded
 id row_index_key
 id rtl
@@ -4339,6 +4356,9 @@ string no_friends_message
 string no_messages
 string no_name
 string no_users_found
+string old_password
+string old_password_required
+string old_password_wrong
 string password_not_match
 string password_required
 string password_toggle_content_description

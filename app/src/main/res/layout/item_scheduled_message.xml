@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardBackgroundColor="#33FFFFFF"
+    android:layout_margin="@dimen/recycler_margin_side"
+    app:cardBackgroundColor="?android:colorBackground"
     app:cardCornerRadius="12dp"
     app:cardElevation="4dp">
 
@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tin nhắn mẫu"
-            android:textSize="16sp"
-            android:textColor="@color/white"
+            android:textSize="@dimen/no_friends_text_size"
+            android:textColor="?android:textColorPrimary"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/poppins_regular" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="Lên lịch: 01/01/2024 12:00"
             android:textSize="12sp"
-            android:textColor="@color/white"
+            android:textColor="?android:textColorSecondary"
             android:alpha="0.8"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/poppins_regular" />
@@ -48,7 +48,7 @@
                 android:layout_weight="1"
                 android:text="Trạng thái: Chờ gửi"
                 android:textSize="12sp"
-                android:textColor="@color/white"
+                android:textColor="?android:textColorSecondary"
                 android:alpha="0.7"
                 android:fontFamily="@font/poppins_regular" />
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hủy lịch"
                 android:textSize="12sp"
-                android:background="@drawable/rounded_button_cancel"
+                android:backgroundTint="@color/gray_dark"
                 android:textColor="@color/white"
                 android:padding="8dp"
                 android:fontFamily="@font/poppins_regular"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="X"
                 android:textSize="14sp"
-                android:background="@drawable/rounded_button_delete"
+                android:backgroundTint="@color/blue_500"
                 android:textColor="@color/white"
                 android:padding="8dp"
                 android:fontFamily="@font/poppins_bold"

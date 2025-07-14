@@ -238,21 +238,57 @@ public class UserAdpter extends RecyclerView.Adapter<UserAdpter.viewholder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String currentUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                String otherUid = users.getUserId();
+                DatabaseReference db = FirebaseDatabase.getInstance().getReference();
                 db.child("friends").child(currentUid).child(otherUid).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.exists()) {
+                    public void onDataChange(@NonNull DataSnapshot friendSnapshot) {
+                        final boolean isFriend = friendSnapshot.exists();
+                        if (isFriend) {
                             Intent intent = new Intent(context, chatWin.class);
-                            intent.putExtra("nameeee",users.getUserName());
-                            intent.putExtra("reciverImg",users.getProfilepic());
-                            intent.putExtra("uid",users.getUserId());
+                            intent.putExtra("nameeee", users.getUserName());
+                            intent.putExtra("reciverImg", users.getProfilepic());
+                            intent.putExtra("uid", users.getUserId());
+                            intent.putExtra("isFriend", true);
+                            intent.putExtra("isPending", false);
                             context.startActivity(intent);
                         } else {
-                            Toast.makeText(context, context.getString(R.string.friends_only_message), Toast.LENGTH_SHORT).show();
+                            db.child("friendRequests").child(otherUid).child(currentUid).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot pendingSnapshot) {
+                                    boolean isPending = pendingSnapshot.exists();
+                                    Intent intent = new Intent(context, chatWin.class);
+                                    intent.putExtra("nameeee", users.getUserName());
+                                    intent.putExtra("reciverImg", users.getProfilepic());
+                                    intent.putExtra("uid", users.getUserId());
+                                    intent.putExtra("isFriend", false);
+                                    intent.putExtra("isPending", isPending);
+                                    context.startActivity(intent);
+                                }
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+                                    Intent intent = new Intent(context, chatWin.class);
+                                    intent.putExtra("nameeee", users.getUserName());
+                                    intent.putExtra("reciverImg", users.getProfilepic());
+                                    intent.putExtra("uid", users.getUserId());
+                                    intent.putExtra("isFriend", false);
+                                    intent.putExtra("isPending", false);
+                                    context.startActivity(intent);
+                                }
+                            });
                         }
                     }
                     @Override
-                    public void onCancelled(@NonNull DatabaseError error) {}
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Intent intent = new Intent(context, chatWin.class);
+                        intent.putExtra("nameeee", users.getUserName());
+                        intent.putExtra("reciverImg", users.getProfilepic());
+                        intent.putExtra("uid", users.getUserId());
+                        intent.putExtra("isFriend", false);
+                        intent.putExtra("isPending", false);
+                        context.startActivity(intent);
+                    }
                 });
             }
         });

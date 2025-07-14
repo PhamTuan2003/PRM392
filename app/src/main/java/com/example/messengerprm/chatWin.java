@@ -66,7 +66,7 @@ public class chatWin extends AppCompatActivity {
     String reciverimg, reciverUid,reciverName,SenderUID;
     String roomId; // Phòng chat chung
     CircleImageView profile;
-    TextView reciverNName, lastMessage, lastMessageTime;
+    TextView reciverNName;
 
     FirebaseDatabase database;
     FirebaseAuth firebaseAuth;
@@ -102,6 +102,10 @@ public class chatWin extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
+        DatabaseReference db = FirebaseDatabase.getInstance().getReference(); // Thêm dòng này ở đầu hàm
+        boolean isFriend = getIntent().getBooleanExtra("isFriend", true); // Chỉ khai báo 1 lần ở đầu hàm
+        boolean isPending = getIntent().getBooleanExtra("isPending", false);
+
         reciverName = getIntent().getStringExtra("nameeee");
         reciverimg = getIntent().getStringExtra("reciverImg");
         reciverUid = getIntent().getStringExtra("uid");
@@ -119,8 +123,11 @@ public class chatWin extends AppCompatActivity {
         scheduleBtn = findViewById(R.id.schedule_btn);
         textmsg = findViewById(R.id.textmsg);
         reciverNName = findViewById(R.id.recivername);
-        lastMessage = findViewById(R.id.lastMessage);
-        lastMessageTime = findViewById(R.id.lastMessageTime);
+        if (reciverNName != null && reciverName != null) {
+            reciverNName.setText(reciverName);
+        }
+        // lastMessage = findViewById(R.id.lastMessage); // XÓA
+        // lastMessageTime = findViewById(R.id.lastMessageTime); // XÓA
 
         profile = findViewById(R.id.profileimgg);
         messageAdpter = findViewById(R.id.msgadpter);
@@ -194,7 +201,6 @@ public class chatWin extends AppCompatActivity {
             profile.setImageResource(R.drawable.photocamera);
         }
 
-        reciverNName.setText(""+reciverName);
 
         SenderUID =  firebaseAuth.getUid();
 
@@ -211,19 +217,22 @@ public class chatWin extends AppCompatActivity {
         updateLastMessageDisplay();
 
         // --- FRIEND CHECK ---
-        DatabaseReference db = FirebaseDatabase.getInstance().getReference();
-        db.child("friends").child(SenderUID).child(reciverUid).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (!snapshot.exists()) {
-                    // Không phải bạn bè, không cho nhắn tin
-                    Toast.makeText(chatWin.this, "Chỉ bạn bè mới nhắn tin được!", Toast.LENGTH_SHORT).show();
-                    finish();
+        if (!isFriend) {
+            // KHÔNG kiểm tra bạn bè nữa, chỉ hiện nút kết bạn (đã xử lý bên dưới)
+        } else {
+            db.child("friends").child(SenderUID).child(reciverUid).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    if (!snapshot.exists()) {
+                        // Không phải bạn bè, không cho nhắn tin
+                        Toast.makeText(chatWin.this, "Chỉ bạn bè mới nhắn tin được!", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
                 }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {}
-        });
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {}
+            });
+        }
 
         DatabaseReference reference = database.getReference().child("user").child(firebaseAuth.getUid());
         DatabaseReference chatreference = database.getReference().child("chats").child(roomId).child("messages");
@@ -295,6 +304,78 @@ public class chatWin extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+        });
+
+        // Lắng nghe trạng thái bạn bè realtime để cập nhật UI khi thay đổi
+        DatabaseReference friendRef = db.child("friends").child(SenderUID).child(reciverUid);
+        friendRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                boolean isFriendRealtime = snapshot.exists();
+                LinearLayout ll2 = findViewById(R.id.ll2);
+                LinearLayout rootLayout = findViewById(R.id.rootLayout);
+                // Xóa các nút kết bạn/thông báo chờ cũ nếu có
+                if (rootLayout != null) {
+                    for (int i = rootLayout.getChildCount() - 1; i >= 0; i--) {
+                        View v = rootLayout.getChildAt(i);
+                        if (v instanceof Button && ((Button) v).getText().toString().equals(getString(R.string.add_friend))) {
+                            rootLayout.removeView(v);
+                        }
+                        if (v instanceof TextView && ((TextView) v).getText().toString().equals(getString(R.string.pending_button))) {
+                            rootLayout.removeView(v);
+                        }
+                    }
+                }
+                if (isFriendRealtime) {
+                    if (ll2 != null) ll2.setVisibility(View.VISIBLE);
+                } else {
+                    // Kiểm tra pending
+                    db.child("friendRequests").child(reciverUid).child(SenderUID).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot pendingSnapshot) {
+                            boolean isPendingRealtime = pendingSnapshot.exists();
+                            if (ll2 != null) ll2.setVisibility(View.GONE);
+                            if (rootLayout != null) {
+                                if (isPendingRealtime) {
+                                    // Thêm TextView thông báo đang chờ xác nhận
+                                    TextView tvPending = new TextView(chatWin.this);
+                                    tvPending.setText(getString(R.string.pending_button));
+                                    tvPending.setTextColor(getResources().getColor(R.color.blue_500));
+                                    tvPending.setTextSize(18);
+                                    tvPending.setPadding(32, 32, 32, 32);
+                                    tvPending.setGravity(android.view.Gravity.CENTER);
+                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                                    params.setMargins(32, 16, 32, 32);
+                                    tvPending.setLayoutParams(params);
+                                    rootLayout.addView(tvPending);
+                                } else {
+                                    // Thêm nút kết bạn nếu chưa gửi
+                                    Button btnAddFriend = new Button(chatWin.this);
+                                    btnAddFriend.setText(getString(R.string.add_friend));
+                                    btnAddFriend.setBackgroundColor(getResources().getColor(R.color.blue_500));
+                                    btnAddFriend.setTextColor(getResources().getColor(R.color.white));
+                                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                                    params.setMargins(32, 16, 32, 32);
+                                    btnAddFriend.setLayoutParams(params);
+                                    rootLayout.addView(btnAddFriend);
+                                    btnAddFriend.setOnClickListener(v -> {
+                                        db.child("friendRequests").child(reciverUid).child(SenderUID).setValue(true);
+                                        btnAddFriend.setText(getString(R.string.pending_button));
+                                        btnAddFriend.setEnabled(false);
+                                        Toast.makeText(chatWin.this, getString(R.string.friend_request_sent), Toast.LENGTH_SHORT).show();
+                                    });
+                                }
+                            }
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {}
+                    });
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {}
         });
 
         // Camera button click
@@ -377,6 +458,65 @@ public class chatWin extends AppCompatActivity {
             }
         });
 
+        LinearLayout ll2 = findViewById(R.id.ll2); // layout nhập/gửi tin nhắn
+        LinearLayout rootLayout = findViewById(R.id.rootLayout); // layout gốc ngoài cùng
+        if (isPending) {
+            if (ll2 != null) ll2.setVisibility(View.GONE);
+            if (rootLayout != null) {
+                // Xóa các nút kết bạn cũ nếu có
+                for (int i = 0; i < rootLayout.getChildCount(); i++) {
+                    View v = rootLayout.getChildAt(i);
+                    if (v instanceof Button && ((Button) v).getText().toString().equals(getString(R.string.add_friend))) {
+                        rootLayout.removeView(v);
+                        break;
+                    }
+                }
+                // Thêm TextView thông báo đang chờ xác nhận
+                TextView tvPending = new TextView(this);
+                tvPending.setText(getString(R.string.pending_button));
+                tvPending.setTextColor(getResources().getColor(R.color.blue_500));
+                tvPending.setTextSize(18);
+                tvPending.setPadding(32, 32, 32, 32);
+                tvPending.setGravity(android.view.Gravity.CENTER);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(32, 16, 32, 32);
+                tvPending.setLayoutParams(params);
+                rootLayout.addView(tvPending);
+            }
+        } else if (!isFriend) {
+            if (ll2 != null) ll2.setVisibility(View.GONE);
+            if (rootLayout != null) {
+                // Xóa các nút kết bạn cũ nếu có
+                for (int i = 0; i < rootLayout.getChildCount(); i++) {
+                    View v = rootLayout.getChildAt(i);
+                    if (v instanceof Button && ((Button) v).getText().toString().equals(getString(R.string.add_friend))) {
+                        rootLayout.removeView(v);
+                        break;
+                    }
+                }
+                Button btnAddFriend = new Button(this);
+                btnAddFriend.setText(getString(R.string.add_friend));
+                btnAddFriend.setBackgroundColor(getResources().getColor(R.color.blue_500));
+                btnAddFriend.setTextColor(getResources().getColor(R.color.white));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(32, 16, 32, 32);
+                btnAddFriend.setLayoutParams(params);
+                rootLayout.addView(btnAddFriend);
+                btnAddFriend.setOnClickListener(v -> {
+                    // Gửi lời mời kết bạn
+                    String currentUid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                    String otherUid = getIntent().getStringExtra("uid");
+                    db.child("friendRequests").child(otherUid).child(currentUid).setValue(true);
+                    btnAddFriend.setText(getString(R.string.pending_button));
+                    btnAddFriend.setEnabled(false);
+                    Toast.makeText(chatWin.this, getString(R.string.friend_request_sent), Toast.LENGTH_SHORT).show();
+                });
+            }
+        } else {
+            if (ll2 != null) ll2.setVisibility(View.VISIBLE);
+        }
 
 
     }
@@ -708,69 +848,7 @@ public class chatWin extends AppCompatActivity {
 
     // Method để hiển thị tin nhắn gần nhất trong header
     public void updateLastMessageDisplay() {
-        // Kiểm tra roomId có null không
-        if (roomId == null) {
-            Log.e("ChatWin", "roomId is null, cannot update last message display");
-            return;
-        }
-        
-        // Lấy tin nhắn gần nhất từ Firebase
-        database.getReference().child("chats").child(roomId).child("messages")
-                .orderByKey().limitToLast(1).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if (snapshot.exists()) {
-                            for (DataSnapshot messageSnapshot : snapshot.getChildren()) {
-                                String message = messageSnapshot.child("message").getValue(String.class);
-                                String sender = messageSnapshot.child("senderId").getValue(String.class);
-                                if (sender == null) sender = messageSnapshot.child("senderid").getValue(String.class); // Fallback
-                                String messageType = messageSnapshot.child("type").getValue(String.class);
-                                if (messageType == null) messageType = messageSnapshot.child("messageType").getValue(String.class); // Fallback
-                                Long timestamp = messageSnapshot.child("timestamp").getValue(Long.class);
-                                if (timestamp == null) timestamp = messageSnapshot.child("timeStamp").getValue(Long.class); // Fallback
-                                
-                                if (message != null && sender != null) {
-                                    // Hiển thị tin nhắn
-                                    if (sender.equals(SenderUID)) {
-                                        if ("image".equals(messageType)) {
-                                            lastMessage.setText("Bạn: [Hình ảnh]");
-                                        } else {
-                                            lastMessage.setText("Bạn: " + message);
-                                        }
-                                    } else {
-                                        if ("image".equals(messageType)) {
-                                            lastMessage.setText("[Hình ảnh]");
-                                        } else {
-                                            lastMessage.setText(message);
-                                        }
-                                    }
-                                    lastMessage.setVisibility(View.VISIBLE);
-                                    
-                                    // Hiển thị thời gian
-                                    if (timestamp != null) {
-                                        String timeText = formatTime(timestamp);
-                                        lastMessageTime.setText(timeText);
-                                        lastMessageTime.setVisibility(View.VISIBLE);
-                                    } else {
-                                        lastMessageTime.setVisibility(View.GONE);
-                                    }
-                                } else {
-                                    lastMessage.setVisibility(View.GONE);
-                                    lastMessageTime.setVisibility(View.GONE);
-                                }
-                            }
-                        } else {
-                            lastMessage.setVisibility(View.GONE);
-                            lastMessageTime.setVisibility(View.GONE);
-                        }
-                    }
-                    
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        lastMessage.setVisibility(View.GONE);
-                        lastMessageTime.setVisibility(View.GONE);
-                    }
-                });
+        // Đã loại bỏ lastMessage và lastMessageTime khỏi layout, không cần cập nhật nữa
     }
     
     // Method để format thời gian
