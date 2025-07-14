@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.spendsmart.test.app-mergeDebugAndroidTestResources-2:/values-v21/values-v21.xml",
+            "outputFile": "com.example.messengerprm.test.app-mergeDebugAndroidTestResources-2:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\b2c4437080da0d3dd18c95935edf9237\\transformed\\jetified-core-1.6.1\\res\\values-v21\\values.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\11157fa6404290698a311fd5e1a8bca9\\transformed\\core-1.6.1\\res\\values-v21\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

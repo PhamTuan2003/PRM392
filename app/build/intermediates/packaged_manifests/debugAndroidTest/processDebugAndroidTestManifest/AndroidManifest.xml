@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.spendsmart.test" >
+    package="com.example.messengerprm.test" >
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="34" />
+        android:targetSdkVersion="36" />
 
     <instrumentation
         android:name="androidx.test.runner.AndroidJUnitRunner"
         android:functionalTest="false"
         android:handleProfiling="false"
-        android:label="Tests for com.example.spendsmart"
-        android:targetPackage="com.example.spendsmart" />
+        android:label="Tests for com.example.messengerprm"
+        android:targetPackage="com.example.messengerprm" />
 
     <queries>
         <package android:name="androidx.test.orchestrator" />

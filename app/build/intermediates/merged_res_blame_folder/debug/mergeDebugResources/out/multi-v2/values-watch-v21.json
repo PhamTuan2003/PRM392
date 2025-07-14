@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.spendsmart.app-mergeDebugResources-46:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.example.messengerprm.app-mergeDebugResources-52:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\73b4d0b1bdd4c079d1444bd8785edd7a\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\b1ee0817d71b65c0489d5f973ddf7423\\transformed\\appcompat-1.7.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",
