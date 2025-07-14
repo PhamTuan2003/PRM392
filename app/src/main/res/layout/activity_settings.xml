@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?android:textColorPrimary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/settingsAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/photocamera"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="Click để đổi avatar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên người dùng"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:textColorPrimary" />
+
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email@example.com"
+                    android:textSize="14sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnChangeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_name"
+            android:layout_marginBottom="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_password"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <LinearLayout
+            android:id="@+id/layoutFriendHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/tvFriendHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Danh sách bạn bè (0)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="?android:textColorPrimary" />
+            <ImageView
+                android:id="@+id/ivArrowFriend"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="?android:colorPrimary" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settingsFriendRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutFriendRequestHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/tvFriendRequestHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Lời mời kết bạn (0)"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="?android:textColorPrimary" />
+            <ImageView
+                android:id="@+id/ivArrowFriendRequest"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/arrow_down_float"
+                android:tint="?android:colorPrimary" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settingsFriendRequestRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnScheduledMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tin nhắn đã lên lịch"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <Button
+            android:id="@+id/btnToggleTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chuyển theme sáng/tối"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đăng xuất"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/holo_red_dark" />
+
+    </LinearLayout>
+</ScrollView> 

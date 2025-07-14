@@ -1,274 +1,386 @@
 [
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_options.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/icon_options.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_counter_type_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_counter_type_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_user_item.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\user_item.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_signin.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_signin.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-night_reciver_shape.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-night\\reciver_shape.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_first_day_of_month_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_first_day_of_month_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_cameraone.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\cameraone.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_one.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\one.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_history.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/fragment_history.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_logo_no_back.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\logo_no_back.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_default.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_default.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_receiver_layout.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\receiver_layout.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_edit_custom_category.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_edit_custom_category.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/menu_statistics_fragment_menu.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/menu/statistics_fragment_menu.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_rounded_button_cancel.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\rounded_button_cancel.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_income_expenses_comparasion_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/income_expenses_comparasion_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_imageadd.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\imageadd.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-xxhdpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-xxhdpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_man.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\man.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gaming.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_gaming.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_chatback.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\chatback.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_black.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_black.ttf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_calendar.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/icon_calendar.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_options.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_options.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_login_backk.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\login_backk.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_history_listview_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/history_listview_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_spartan_thin.otf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\spartan_thin.otf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-hdpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-hdpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-night_chat_bg.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-night\\chat_bg.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_transfer.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_transfer.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_spartan_bold.otf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\spartan_bold.otf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_kids.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_kids.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_reciver_shape.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\reciver_shape.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_statistics.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/fragment_statistics.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\anim_top_animation.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\anim\\top_animation.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_add_wallet_entry.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_add_wallet_entry.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-xhdpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-xhdpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_sendbut.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\sendbut.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_sport.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_sport.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_settingback.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\settingback.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_home.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_home.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_search.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/menu_history_fragment_menu.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/menu/history_fragment_menu.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_camera.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\camera.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_baseline_add_white_18dp.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/baseline_add_white_18dp.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_bold.ttf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_food.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_food.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_new_entry_type_spinner_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/new_entry_type_spinner_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_checked.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\checked.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_transport.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_transport.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_money_icon.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/money_icon.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_dialog_schedule_message.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\dialog_schedule_message.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_background_circle.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/icon_background_circle.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_counter_period_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_counter_period_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_pharmacy.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_pharmacy.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_logout.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\logout.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_favorites_listview_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/favorites_listview_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_empty_background.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\empty_background.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_test.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/test.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_edit_wallet_entry.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_edit_wallet_entry.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_scheduled_messages.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_scheduled_messages.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_repair.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_repair.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_italic.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_italic.ttf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_home.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_photocamera.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\photocamera.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/anim_hold.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/anim/hold.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_av.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\av.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-ldpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-ldpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_fone.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\fone.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_fragment_options.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/fragment_options.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_first_day_of_week_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_first_day_of_week_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_shopping.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_shopping.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_receiver_layout.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\receiver_layout.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_icon_calendar_active.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/icon_calendar_active.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_rounded_edittext.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\rounded_edittext.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_background_splash.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/background_splash.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_sender_layout.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\sender_layout.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-xxxhdpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-xxxhdpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_gallery.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_gallery.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_holidays.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_holidays.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-mdpi_logo.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-mdpi/logo.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_top_categories_statistics_listview_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/top_categories_statistics_listview_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_camera.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_currency_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_currency_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_bhu.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\bhu.ttf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gas_station.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_gas_station.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_schedule.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_schedule.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bordermain.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bordermain.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/menu_home_fragment_menu.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/menu/home_fragment_menu.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_power.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\power.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_chatone.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\chatone.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_clothing.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_clothing.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_circle_background.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\circle_background.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_custom_categories_listview_row.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/custom_categories_listview_row.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_badge_unread_bg.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\badge_unread_bg.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_main_menu.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_main_menu.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bottom_bar_bg.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bottom_bar_bg.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_custom_categories.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_custom_categories.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_spartan_regular.otf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\spartan_regular.otf"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_settone.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\settone.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/xml_app_preferences.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/xml/app_preferences.xml"
+        "merged": "com.example.messengerprm.app-debug-54:/drawable_rounded_button_delete.xml.flat",
+        "source": "com.example.messengerprm.app-main-56:/drawable/rounded_button_delete.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_gift.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_gift.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_fthree.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\fthree.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_activity_add_custom_category.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/activity_add_custom_category.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_mainback.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\mainback.png"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_content_main_menu.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/content_main_menu.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_user_item.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\user_item.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.example.spendsmart.app-main-50:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.example.messengerprm.app-debug-54:/layout_item_scheduled_message.xml.flat",
+        "source": "com.example.messengerprm.app-main-56:/layout/item_scheduled_message.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/layout_set_limit_dialog.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/layout/set_limit_dialog.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/transition_changebounds_with_arcmotion.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/transition/changebounds_with_arcmotion.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\xml\\file_paths.xml"
     },
     {
-        "merged": "com.example.spendsmart.app-debug-48:/drawable_category_briefcase.xml.flat",
-        "source": "com.example.spendsmart.app-main-50:/drawable/category_briefcase.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bg_avatar_circle.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bg_avatar_circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_dialog_change_name.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\dialog_change_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_image_viewer.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_image_viewer.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_sender_layout.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\sender_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_apptext.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\apptext.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_chat_win.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_chat_win.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_rounded_button.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\rounded_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_regis_back.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\regis_back.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_regular.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_regular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_sender_shape.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\sender_shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_chat_bg.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\chat_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_shapedialog.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\shapedialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_activity_chat_win.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\activity_chat_win.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_chat.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\chat.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_two.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\two.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_sett.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\sett.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_dialog_change_password.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\dialog_change_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_ftwo.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\ftwo.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_dancing.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\dancing.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\anim_bottom_animation.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\anim\\bottom_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_item_scheduled_message.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\item_scheduled_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-night_sender_shape.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-night\\sender_shape.xml"
     }
 ]

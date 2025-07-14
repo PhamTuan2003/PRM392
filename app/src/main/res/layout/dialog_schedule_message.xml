@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/chat_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lên lịch tin nhắn"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins_regular" />
+
+    <EditText
+        android:id="@+id/et_scheduled_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tin nhắn..."
+        android:background="@drawable/rounded_edittext"
+        android:padding="15dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:alpha="0.8"
+        android:fontFamily="@font/poppins_regular" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian gửi:"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins_regular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/btn_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chọn ngày"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular" />
+
+        <Button
+            android:id="@+id/btn_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Chọn giờ"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_scheduled_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chưa chọn thời gian"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins_regular" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hủy"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_button_cancel"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular" />
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lên lịch"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/rounded_button"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular" />
+
+    </LinearLayout>
+
+</LinearLayout> 

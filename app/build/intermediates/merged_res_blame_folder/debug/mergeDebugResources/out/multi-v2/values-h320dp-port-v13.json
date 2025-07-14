@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.spendsmart.app-mergeDebugResources-46:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.example.messengerprm.app-mergeDebugResources-52:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\ee20683921723a0b4751888f9e31d5b8\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\779e3b4bd609d9189800abf1b0b11417\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

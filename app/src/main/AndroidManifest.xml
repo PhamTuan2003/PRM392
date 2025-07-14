@@ -1,65 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.spendsmart">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
-        android:name="com.example.spendsmart.FirebaseHandler"
         android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MaterialTheme">
+        android:theme="@style/Theme.MessengerPRM"
+        android:requestLegacyExternalStorage="true">
+        
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        
         <activity
-            android:name="com.example.spendsmart.ui.splash_screen.SplashActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme"
-            android:configChanges="orientation|screenSize">
+            android:name=".chatWin"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".splash"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.spendsmart.ui.signin.SignInActivity"
-            android:configChanges="orientation|screenSize" />
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
-            android:name="com.example.spendsmart.ui.main.MainActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name="com.example.spendsmart.ui.add_entry.AddWalletEntryActivity"
-            android:configChanges="orientation|screenSize"
-            tools:ignore="Instantiatable">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
-        <activity android:name="com.example.spendsmart.ui.options.OptionsActivity"
-            android:configChanges="orientation|screenSize">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
-        <activity android:name="com.example.spendsmart.ui.main.history.edit_entry.EditWalletEntryActivity"
-            android:configChanges="orientation|screenSize"
-            tools:ignore="Instantiatable">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.CustomCategoriesActivity"
-            android:configChanges="orientation|screenSize"
-            tools:ignore="Instantiatable" />
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.AddCustomCategoryActivity"
-            android:configChanges="orientation|screenSize"
-            tools:ignore="Instantiatable" />
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.EditCustomCategoryActivity"
-            android:configChanges="orientation|screenSize"
-            tools:ignore="Instantiatable" />
+            android:name=".ImageViewerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".ScheduledMessagesActivity" android:exported="false" />
+        
+        <service
+            android:name=".MessageSchedulerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+        
+        <receiver
+            android:name=".MessageSchedulerReceiver"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>

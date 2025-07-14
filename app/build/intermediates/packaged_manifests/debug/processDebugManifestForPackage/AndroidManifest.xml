@@ -1,82 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.spendsmart"
+    package="com.example.messengerprm"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="24"
-        android:targetSdkVersion="34" />
+        android:targetSdkVersion="36" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <permission
-        android:name="com.example.spendsmart.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="com.example.messengerprm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="com.example.spendsmart.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="com.example.messengerprm.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="com.example.spendsmart.FirebaseHandler"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:extractNativeLibs="false"
+        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/MaterialTheme" >
+        android:theme="@style/Theme.MessengerPRM" >
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.messengerprm.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
         <activity
-            android:name="com.example.spendsmart.ui.splash_screen.SplashActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="true"
-            android:theme="@style/SplashTheme" >
+            android:name="com.example.messengerprm.chatWin"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.example.messengerprm.register"
+            android:exported="false" />
+        <activity
+            android:name="com.example.messengerprm.login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.messengerprm.splash"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.spendsmart.ui.signin.SignInActivity"
-            android:configChanges="orientation|screenSize" />
+            android:name="com.example.messengerprm.MainActivity"
+            android:exported="false" />
         <activity
-            android:name="com.example.spendsmart.ui.main.MainActivity"
-            android:configChanges="orientation|screenSize" />
+            android:name="com.example.messengerprm.ImageViewerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name="com.example.spendsmart.ui.add_entry.AddWalletEntryActivity"
-            android:configChanges="orientation|screenSize" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
+            android:name="com.example.messengerprm.SettingsActivity"
+            android:exported="false" />
         <activity
-            android:name="com.example.spendsmart.ui.options.OptionsActivity"
-            android:configChanges="orientation|screenSize" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.spendsmart.ui.main.history.edit_entry.EditWalletEntryActivity"
-            android:configChanges="orientation|screenSize" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.spendsmart.ui.main.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.CustomCategoriesActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.AddCustomCategoryActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name="com.example.spendsmart.ui.options.categories.EditCustomCategoryActivity"
-            android:configChanges="orientation|screenSize" />
+            android:name="com.example.messengerprm.ScheduledMessagesActivity"
+            android:exported="false" />
+
+        <service
+            android:name="com.example.messengerprm.MessageSchedulerService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse" />
+
+        <receiver
+            android:name="com.example.messengerprm.MessageSchedulerReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name="com.google.firebase.auth.internal.GenericIdpActivity"
             android:excludeFromRecents="true"
@@ -128,6 +150,18 @@
                 android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
@@ -173,13 +207,21 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.example.spendsmart.firebaseinitprovider"
+            android:authorities="com.example.messengerprm.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.spendsmart.androidx-startup"
+            android:authorities="com.example.messengerprm.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"
@@ -192,16 +234,14 @@
                 android:value="androidx.startup" />
         </provider>
 
-        <uses-library
-            android:name="androidx.window.extensions"
-            android:required="false" />
-        <uses-library
-            android:name="androidx.window.sidecar"
-            android:required="false" />
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.messengerprm.com.squareup.picasso"
+            android:exported="false" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
@@ -221,7 +261,12 @@
             <intent-filter>
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
-        </receiver>
+        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
+        <activity
+            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
+            android:exported="false"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.PlayCore.Transparent" />
     </application>
 
 </manifest>

@@ -1,10 +1,34 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.spendsmart.test.app-debugAndroidTest-4:/values_values.arsc.flat",
+            "outputFile": "com.example.messengerprm.test.app-debugAndroidTest-4:/values-v21_values-v21.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\b2c4437080da0d3dd18c95935edf9237\\transformed\\jetified-core-1.6.1\\res\\values\\values.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\11157fa6404290698a311fd5e1a8bca9\\transformed\\core-1.6.1\\res\\values-v21\\values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "146,621",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "620,1093"
+                    },
+                    "to": {
+                        "startLines": "2,11",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,534",
+                        "endLines": "10,19",
+                        "endColumns": "8,8",
+                        "endOffsets": "529,1006"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.messengerprm.test.app-debugAndroidTest-4:/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\11157fa6404290698a311fd5e1a8bca9\\transformed\\core-1.6.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "4,11",
                         "startColumns": "0,0",
@@ -25,34 +49,10 @@
             ]
         },
         {
-            "outputFile": "com.example.spendsmart.test.app-debugAndroidTest-4:/values-v18_values-v18.arsc.flat",
+            "outputFile": "com.example.messengerprm.test.app-debugAndroidTest-4:/values-v28_values-v28.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\b2c4437080da0d3dd18c95935edf9237\\transformed\\jetified-core-1.6.1\\res\\values-v18\\values.xml",
-                    "from": {
-                        "startLines": "4,12",
-                        "startColumns": "0,0",
-                        "startOffsets": "146,562",
-                        "endLines": "11,19",
-                        "endColumns": "8,8",
-                        "endOffsets": "561,975"
-                    },
-                    "to": {
-                        "startLines": "2,10",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,475",
-                        "endLines": "9,17",
-                        "endColumns": "8,8",
-                        "endOffsets": "470,888"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "com.example.spendsmart.test.app-debugAndroidTest-4:/values-v28_values-v28.arsc.flat",
-            "map": [
-                {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\b2c4437080da0d3dd18c95935edf9237\\transformed\\jetified-core-1.6.1\\res\\values-v28\\values.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\11157fa6404290698a311fd5e1a8bca9\\transformed\\core-1.6.1\\res\\values-v28\\values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",
@@ -73,25 +73,25 @@
             ]
         },
         {
-            "outputFile": "com.example.spendsmart.test.app-debugAndroidTest-4:/values-v21_values-v21.arsc.flat",
+            "outputFile": "com.example.messengerprm.test.app-debugAndroidTest-4:/values-v18_values-v18.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\ADMIN\\.gradle\\caches\\transforms-4\\b2c4437080da0d3dd18c95935edf9237\\transformed\\jetified-core-1.6.1\\res\\values-v21\\values.xml",
+                    "source": "C:\\Users\\lvha0\\.gradle\\caches\\8.13\\transforms\\11157fa6404290698a311fd5e1a8bca9\\transformed\\core-1.6.1\\res\\values-v18\\values.xml",
                     "from": {
-                        "startLines": "4,13",
+                        "startLines": "4,12",
                         "startColumns": "0,0",
-                        "startOffsets": "146,621",
-                        "endLines": "12,21",
+                        "startOffsets": "146,562",
+                        "endLines": "11,19",
                         "endColumns": "8,8",
-                        "endOffsets": "620,1093"
+                        "endOffsets": "561,975"
                     },
                     "to": {
-                        "startLines": "2,11",
+                        "startLines": "2,10",
                         "startColumns": "4,4",
-                        "startOffsets": "55,534",
-                        "endLines": "10,19",
+                        "startOffsets": "55,475",
+                        "endLines": "9,17",
                         "endColumns": "8,8",
-                        "endOffsets": "529,1006"
+                        "endOffsets": "470,888"
                     }
                 }
             ]
