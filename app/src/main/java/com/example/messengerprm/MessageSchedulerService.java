@@ -109,17 +109,19 @@ public class MessageSchedulerService extends Service {
     
     private void checkScheduledMessages() {
         long currentTime = System.currentTimeMillis();
-        
         scheduledMessagesRef.orderByChild("scheduledTime")
             .startAt(currentTime)
             .endAt(currentTime + 60000) // Check messages scheduled in the next minute
-            .addValueEventListener(new ValueEventListener() {
+            .addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    long now = System.currentTimeMillis();
                     for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                         ScheduledMessage scheduledMessage = snapshot.getValue(ScheduledMessage.class);
                         if (scheduledMessage != null && !scheduledMessage.isSent()) {
-                            sendScheduledMessage(scheduledMessage, snapshot.getKey());
+                            if (scheduledMessage.getScheduledTime() <= now) {
+                                sendScheduledMessage(scheduledMessage, snapshot.getKey());
+                            }
                         }
                     }
                 }

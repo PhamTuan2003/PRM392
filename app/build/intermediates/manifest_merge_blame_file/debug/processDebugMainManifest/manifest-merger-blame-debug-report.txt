@@ -9,36 +9,36 @@
 9        android:targetSdkVersion="36" />
 10
 11    <uses-permission android:name="android.permission.CAMERA" />
-11-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:5:5-65
-11-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:5:22-62
+11-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:5:22-62
 12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-12-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:6:5-80
-12-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:6:22-77
+12-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:6:22-77
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:7:5-81
-13-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:7:22-78
+13-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-14-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:8:5-76
-14-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:8:22-73
+14-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:8:5-76
+14-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:8:22-73
 15    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
-15-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:9:5-79
-15-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:9:22-76
+15-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:9:5-79
+15-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:9:22-76
 16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-16-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:10:5-77
-16-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:10:22-74
+16-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:10:5-77
+16-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:10:22-74
 17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-17-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:11:5-77
-17-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:11:22-74
+17-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:11:5-77
+17-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:11:22-74
 18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-18-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:12:5-89
-18-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:12:22-86
+18-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:12:5-89
+18-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:12:22-86
 19
 20    <uses-feature
-20-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:14:5-85
+20-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:14:5-85
 21        android:name="android.hardware.camera"
-21-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:14:19-57
+21-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:14:19-57
 22        android:required="false" />
-22-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:14:58-82
+22-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:14:58-82
 23
 24    <uses-permission android:name="android.permission.INTERNET" />
 24-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\lvha0\.gradle\caches\8.13\transforms\6533e2f22ea57aa54739c276b1b49f8d\transformed\firebase-auth-23.2.1\AndroidManifest.xml:25:5-67
@@ -62,130 +62,130 @@
 32-->[androidx.core:core:1.13.1] C:\Users\lvha0\.gradle\caches\8.13\transforms\d948e4502e98788c3f845777b0958181\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
 33
 34    <application
-34-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:16:5-76:19
+34-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:16:5-76:19
 35        android:allowBackup="true"
-35-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:17:9-35
+35-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:17:9-35
 36        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 36-->[androidx.core:core:1.13.1] C:\Users\lvha0\.gradle\caches\8.13\transforms\d948e4502e98788c3f845777b0958181\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 37        android:dataExtractionRules="@xml/data_extraction_rules"
-37-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:18:9-65
+37-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:18:9-65
 38        android:debuggable="true"
 39        android:extractNativeLibs="false"
 40        android:fullBackupContent="@xml/backup_rules"
-40-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:19:9-54
+40-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:19:9-54
 41        android:icon="@mipmap/ic_launcher"
-41-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:20:9-43
+41-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:20:9-43
 42        android:label="@string/app_name"
-42-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:21:9-41
+42-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:21:9-41
 43        android:requestLegacyExternalStorage="true"
-43-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:25:9-52
+43-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:25:9-52
 44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:22:9-54
+44-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:22:9-54
 45        android:supportsRtl="true"
-45-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:23:9-35
+45-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:23:9-35
 46        android:testOnly="true"
 47        android:theme="@style/Theme.MessengerPRM" >
-47-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:24:9-50
+47-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:24:9-50
 48        <provider
 49            android:name="androidx.core.content.FileProvider"
-49-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:28:13-62
+49-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:28:13-62
 50            android:authorities="com.example.messengerprm.fileprovider"
-50-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:29:13-64
+50-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:29:13-64
 51            android:exported="false"
-51-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:30:13-37
+51-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:30:13-37
 52            android:grantUriPermissions="true" >
-52-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:31:13-47
+52-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:31:13-47
 53            <meta-data
-53-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:32:13-34:54
+53-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:32:13-34:54
 54                android:name="android.support.FILE_PROVIDER_PATHS"
-54-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:33:17-67
+54-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:33:17-67
 55                android:resource="@xml/file_paths" />
-55-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:34:17-51
+55-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:34:17-51
 56        </provider>
 57
 58        <activity
-58-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:37:9-40:58
+58-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:37:9-40:58
 59            android:name="com.example.messengerprm.chatWin"
-59-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:38:13-36
+59-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:38:13-36
 60            android:exported="false"
-60-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:39:13-37
+60-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:39:13-37
 61            android:windowSoftInputMode="adjustResize" />
-61-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:40:13-55
+61-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:40:13-55
 62        <activity
-62-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:41:9-43:40
+62-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:41:9-43:40
 63            android:name="com.example.messengerprm.register"
-63-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:42:13-37
+63-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:42:13-37
 64            android:exported="false" />
-64-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:43:13-37
+64-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:43:13-37
 65        <activity
-65-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:44:9-46:40
+65-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:44:9-46:40
 66            android:name="com.example.messengerprm.login"
-66-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:45:13-34
+66-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:45:13-34
 67            android:exported="false" />
-67-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:46:13-37
+67-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:46:13-37
 68        <activity
-68-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:47:9-55:20
+68-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:47:9-55:20
 69            android:name="com.example.messengerprm.splash"
-69-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:48:13-35
+69-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:48:13-35
 70            android:exported="true" >
-70-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:49:13-36
+70-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:49:13-36
 71            <intent-filter>
-71-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:50:13-54:29
+71-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:50:13-54:29
 72                <action android:name="android.intent.action.MAIN" />
-72-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:51:17-69
-72-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:51:25-66
+72-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:51:17-69
+72-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:51:25-66
 73
 74                <category android:name="android.intent.category.LAUNCHER" />
-74-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:53:17-77
-74-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:53:27-74
+74-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:53:17-77
+74-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:53:27-74
 75            </intent-filter>
 76        </activity>
 77        <activity
-77-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:56:9-58:40
+77-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:56:9-58:40
 78            android:name="com.example.messengerprm.MainActivity"
-78-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:57:13-41
+78-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:57:13-41
 79            android:exported="false" />
-79-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:58:13-37
+79-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:58:13-37
 80        <activity
-80-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:59:9-62:66
+80-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:59:9-62:66
 81            android:name="com.example.messengerprm.ImageViewerActivity"
-81-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:60:13-48
+81-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:60:13-48
 82            android:exported="false"
-82-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:61:13-37
+82-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:61:13-37
 83            android:theme="@style/Theme.AppCompat.NoActionBar" />
-83-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:62:13-63
+83-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:62:13-63
 84        <activity
-84-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:63:9-79
+84-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:63:9-79
 85            android:name="com.example.messengerprm.SettingsActivity"
-85-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:63:19-51
+85-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:63:19-51
 86            android:exported="false" />
-86-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:63:52-76
+86-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:63:52-76
 87        <activity
-87-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:64:9-88
+87-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:64:9-88
 88            android:name="com.example.messengerprm.ScheduledMessagesActivity"
-88-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:64:19-60
+88-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:64:19-60
 89            android:exported="false" />
-89-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:64:61-85
+89-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:64:61-85
 90
 91        <service
-91-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:66:9-70:58
+91-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:66:9-70:58
 92            android:name="com.example.messengerprm.MessageSchedulerService"
-92-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:67:13-52
+92-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:67:13-52
 93            android:enabled="true"
-93-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:68:13-35
+93-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:68:13-35
 94            android:exported="false"
-94-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:69:13-37
+94-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:69:13-37
 95            android:foregroundServiceType="specialUse" />
-95-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:70:13-55
+95-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:70:13-55
 96
 97        <receiver
-97-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:72:9-75:40
+97-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:72:9-75:40
 98            android:name="com.example.messengerprm.MessageSchedulerReceiver"
-98-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:73:13-53
+98-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:73:13-53
 99            android:enabled="true"
-99-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:74:13-35
+99-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:74:13-35
 100            android:exported="false" />
-100-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM391\app\src\main\AndroidManifest.xml:75:13-37
+100-->C:\Users\lvha0\OneDrive\Máy tính\PRM\PRM392\app\src\main\AndroidManifest.xml:75:13-37
 101
 102        <activity
 102-->[com.google.firebase:firebase-auth:23.2.1] C:\Users\lvha0\.gradle\caches\8.13\transforms\6533e2f22ea57aa54739c276b1b49f8d\transformed\firebase-auth-23.2.1\AndroidManifest.xml:29:9-46:20
