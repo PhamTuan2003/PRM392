@@ -1,239 +1,85 @@
-# MessengerPRM - Android Messenger App
+# CalculatorPRM - Ứng dụng chat bí mật dưới vỏ bọc máy tính
 
-## 📱 Mô tả dự án
-Ứng dụng messenger Android đơn giản sử dụng Firebase Authentication và Realtime Database để lưu trữ dữ liệu người dùng.
+## Giới thiệu
 
-## 🚀 Tính năng
-- ✅ Đăng ký tài khoản mới
-- ✅ Đăng nhập với email/password
-- ✅ Lưu trữ thông tin user trong Firebase Realtime Database
-- ✅ Upload và lưu trữ ảnh profile dưới dạng Base64
-- ✅ Hiển thị thông tin user và ảnh profile từ database
-- ✅ **Chỉnh sửa profile** (tên, trạng thái, password, avatar)
-- ✅ **Hệ thống kết bạn** (gửi/chấp nhận/từ chối lời mời)
-- ✅ **Chat real-time** với bạn bè
-- ✅ **Gửi hình ảnh** trong chat
-- ✅ **Xem ảnh fullscreen** với zoom
-- ✅ **Dark/Light theme**
-- ✅ Giao diện đẹp với Material Design
+**CalculatorPRM** là một ứng dụng chat bảo mật dành cho Android, được “ngụy trang” dưới dạng một ứng dụng máy tính thông thường. Bạn có thể sử dụng nó như một máy tính bình thường, nhưng khi nhập đúng mã PIN, bạn sẽ truy cập vào thế giới chat bí mật với bạn bè, gửi tin nhắn, hình ảnh, và nhiều tính năng thú vị khác.
 
-## 🔧 Cấu hình Firebase
+---
 
-### 1. Tạo project Firebase
-1. Truy cập [Firebase Console](https://console.firebase.google.com/)
-2. Tạo project mới
-3. Thêm ứng dụng Android với package name: `com.example.messengerprm`
+## Tính năng nổi bật
 
-### 2. Cấu hình Authentication
-1. Vào **Authentication** > **Sign-in method**
-2. Bật **Email/Password**
-3. Lưu cấu hình
+### 1. Ngụy trang hoàn hảo
+- Ứng dụng hiển thị ngoài màn hình chính như một app máy tính thông thường.
+- Giao diện máy tính hiện đại, có thể thực hiện các phép tính cơ bản.
+- Nhập đúng mã PIN (mặc định: 1234) để mở khóa và truy cập vào tính năng chat.
 
-### 3. Cấu hình Realtime Database
-1. Vào **Realtime Database**
-2. Tạo database mới
-3. Chọn **Start in test mode** (cho development)
-4. Copy URL database
+### 2. Bảo mật với mã PIN
+- Đổi mã PIN dễ dàng trong phần cài đặt.
+- Không ai biết bạn đang dùng app chat nếu không có mã PIN.
 
-### 4. Cấu hình Security Rules
-```json
-{
-  "rules": {
-    "user": {
-      "$uid": {
-        ".read": "$uid === auth.uid",
-        ".write": "$uid === auth.uid",
-        "userName": {
-          ".validate": "newData.isString() && newData.val().length >= 2"
-        },
-        "status": {
-          ".validate": "newData.isString() && newData.val().length <= 100"
-        }
-      }
-    },
-    "friendRequests": {
-      "$toUid": {
-        "$fromUid": {
-          ".read": "$toUid === auth.uid || $fromUid === auth.uid",
-          ".write": "$fromUid === auth.uid"
-        }
-      }
-    },
-    "friends": {
-      "$uid": {
-        "$friendUid": {
-          ".read": "$uid === auth.uid || $friendUid === auth.uid",
-          ".write": "$uid === auth.uid || $friendUid === auth.uid"
-        }
-      }
-    },
-    "chats": {
-      "$chatRoomId": {
-        ".read": "$chatRoomId.matches(/.*" + auth.uid + ".*/)",
-        ".write": "$chatRoomId.matches(/.*" + auth.uid + ".*/)",
-        "messages": {
-          "$messageId": {
-            ".read": "$chatRoomId.matches(/.*" + auth.uid + ".*/)",
-            ".write": "$chatRoomId.matches(/.*" + auth.uid + ".*/)"
-          }
-        },
-        "read": {
-          "$messageId": {
-            ".read": "$chatRoomId.matches(/.*" + auth.uid + ".*/)",
-            ".write": "$chatRoomId.matches(/.*" + auth.uid + ".*/)"
-          }
-        }
-      }
-    }
-  }
-}
-```
+### 3. Đăng ký & đăng nhập
+- Đăng ký tài khoản mới bằng email và mật khẩu.
+- Đăng nhập an toàn với Firebase Authentication.
 
-## 📁 Cấu trúc dự án
+### 4. Quản lý bạn bè
+- Gửi, nhận, chấp nhận hoặc từ chối lời mời kết bạn.
+- Danh sách bạn bè hiển thị rõ ràng, dễ tìm kiếm.
 
-```
-app/src/main/java/com/example/messengerprm/
-├── MainActivity.java           # Màn hình chính hiển thị danh sách bạn bè
-├── login.java                 # Màn hình đăng nhập
-├── register.java              # Màn hình đăng ký với upload ảnh
-├── splash.java                # Màn hình splash
-├── chatWin.java              # Màn hình chat với gửi ảnh
-├── SettingsActivity.java      # Màn hình cài đặt và chỉnh sửa profile
-├── ImageViewerActivity.java   # Xem ảnh fullscreen
-├── Users.java                # Model class cho user data
-├── msgModelclass.java        # Model class cho tin nhắn
-├── UserAdpter.java           # Adapter cho danh sách người dùng
-├── messagesAdpter.java       # Adapter cho tin nhắn chat
-├── FriendRequestAdapter.java  # Adapter cho lời mời kết bạn
-├── ImageUtils.java           # Utility class xử lý ảnh Base64
-└── ZoomableImageView.java    # Custom view zoom ảnh
-```
+### 5. Chat real-time
+- Nhắn tin với bạn bè theo thời gian thực.
+- Gửi và nhận hình ảnh trong cuộc trò chuyện.
+- Xem ảnh ở chế độ toàn màn hình, hỗ trợ zoom.
 
-## 🗄️ Cấu trúc Database
+### 6. Chỉnh sửa hồ sơ cá nhân
+- Đổi tên, trạng thái, mật khẩu, avatar ngay trong app.
+- Thay đổi được cập nhật tức thì lên Firebase.
 
-### Users Collection
-```json
-{
-  "user": {
-    "USER_ID": {
-      "userId": "USER_ID",
-      "userName": "Tên người dùng",
-      "mail": "email@example.com",
-      "password": "password",
-      "profilepic": "Base64_string_hoặc_URL",
-      "status": "Available"
-    }
-  },
-  "friendRequests": {
-    "toUserId": {
-      "fromUserId": true
-    }
-  },
-  "friends": {
-    "userId1": {
-      "userId2": true
-    }
-  },
-  "chats": {
-    "chatRoomId": {
-      "messages": {
-        "messageId": {
-          "message": "Nội dung tin nhắn",
-          "senderid": "USER_ID",
-          "timeStamp": 1234567890,
-          "imageUrl": "Base64_string",
-          "messageType": "text|image"
-        }
-      },
-      "read": {
-        "messageId": true
-      }
-    }
-  }
-}
-```
+### 7. Lên lịch gửi tin nhắn
+- Đặt lịch gửi tin nhắn tự động vào thời điểm mong muốn.
+- Quản lý, hủy, theo dõi trạng thái các tin nhắn đã lên lịch.
 
-### 📸 Lưu trữ ảnh
-- **Base64**: Ảnh được chuyển thành Base64 string và lưu trực tiếp trong database
-- **Nén ảnh**: Tự động nén ảnh xuống 512px để tiết kiệm dung lượng
-- **Chất lượng**: JPEG với chất lượng 50% để giảm kích thước
+### 8. Giao diện đẹp, dễ dùng
+- Thiết kế theo Material Design, hỗ trợ cả Light/Dark mode.
+- Tối ưu cho trải nghiệm người dùng hiện đại.
 
-## 🚀 Cách chạy ứng dụng
+---
 
-1. **Clone project**
-   ```bash
-   git clone <repository-url>
-   cd MessengerPRM
-   ```
+## Cách sử dụng
 
-2. **Thêm file google-services.json**
-   - Tải file từ Firebase Console
-   - Đặt vào thư mục `app/`
+1. Cài đặt app và mở lên, bạn sẽ thấy giao diện máy tính.
+2. Nhập mã PIN bí mật (mặc định: 1234) rồi nhấn "=" để mở khóa tính năng chat.
+3. Đăng ký hoặc đăng nhập tài khoản để bắt đầu kết bạn, nhắn tin.
+4. Vào phần cài đặt để đổi mã PIN, chỉnh sửa hồ sơ, hoặc xem các tin nhắn đã lên lịch.
+5. Sử dụng như một app chat thông thường, nhưng hoàn toàn bí mật!
 
-3. **Build và chạy**
-   ```bash
-   ./gradlew build
-   ```
+---
 
-## 📱 Luồng hoạt động
+## Công nghệ sử dụng
 
-1. **Splash Screen** → 4 giây delay
-2. **Login Screen** → Đăng nhập hoặc chuyển sang Register
-3. **Register Screen** → Đăng ký tài khoản mới
-4. **Main Activity** → Hiển thị danh sách bạn bè và tìm kiếm
-5. **Settings** → Chỉnh sửa profile, quản lý bạn bè
-6. **Chat** → Nhắn tin và gửi ảnh với bạn bè
+- Android SDK, Java
+- Firebase Authentication & Realtime Database
+- Firebase Storage (lưu ảnh)
+- Material Design
+- Picasso (load ảnh)
+- AlarmManager (lên lịch gửi tin nhắn)
 
-## 🔒 Bảo mật
+---
 
-- Sử dụng Firebase Authentication
-- Dữ liệu được bảo vệ bởi Security Rules
-- Chỉ user đã đăng nhập mới có thể đọc/ghi dữ liệu của mình
-- Chỉ bạn bè mới nhắn tin được
+## Một số lưu ý
 
-## 📊 Firebase Services sử dụng
+- Đừng quên đổi mã PIN mặc định để tăng bảo mật!
+- Ứng dụng yêu cầu quyền truy cập camera, bộ nhớ để gửi/nhận ảnh.
+- Cần kết nối internet để sử dụng các tính năng chat, gửi ảnh, đồng bộ dữ liệu.
 
-- ✅ **Firebase Authentication** - Xác thực người dùng
-- ✅ **Firebase Realtime Database** - Lưu trữ dữ liệu
-- ❌ **Firebase Storage** - Không sử dụng (free tier)
+---
 
-## 🎯 Tính năng mới: Chỉnh sửa Profile
+## Hỗ trợ
 
-### Các tính năng:
-- ✅ **Chỉnh sửa tên**: Thay đổi tên hiển thị
-- ✅ **Cập nhật trạng thái**: Thay đổi status cá nhân
-- ✅ **Thay đổi password**: Cập nhật mật khẩu (tùy chọn)
-- ✅ **Đổi avatar**: Upload ảnh đại diện mới
-- ✅ **Validation**: Kiểm tra dữ liệu trước khi lưu
-- ✅ **Real-time update**: Cập nhật ngay lập tức
-- ✅ **Firebase Auth sync**: Đồng bộ password với Firebase Authentication
+Nếu bạn gặp vấn đề khi sử dụng app, hãy kiểm tra:
+- Đã cấp đủ quyền cho app chưa (camera, bộ nhớ)?
+- Đã thêm file `google-services.json` vào thư mục `app/` chưa?
+- Kết nối internet có ổn định không?
 
-### Validation Rules:
-- **Tên**: Bắt buộc, tối thiểu 2 ký tự
-- **Trạng thái**: Bắt buộc, tối đa 100 ký tự
-- **Password**: Tùy chọn, tối thiểu 6 ký tự nếu thay đổi
-- **Confirm Password**: Phải khớp với password mới
-- **Email**: Không thể chỉnh sửa (bảo mật)
+---
 
-## 🛠️ Công nghệ sử dụng
-
-- **Android SDK** - Phát triển ứng dụng
-- **Java** - Ngôn ngữ lập trình
-- **Firebase** - Backend services
-- **Material Design** - UI/UX
-- **CircleImageView** - Hiển thị ảnh profile tròn
-- **RecyclerView** - Hiển thị danh sách
-- **Picasso** - Load ảnh từ URL
-
-## 📞 Hỗ trợ
-
-Nếu có vấn đề gì, hãy kiểm tra:
-1. File `google-services.json` đã được thêm chưa
-2. Firebase project đã được cấu hình đúng chưa
-3. Internet connection có ổn định không
-4. Permissions đã được cấp chưa (camera, storage)
-
-## 📚 Tài liệu tham khảo
-
-- [README_IMAGE_FEATURES.md](README_IMAGE_FEATURES.md) - Tính năng gửi hình ảnh
-- [README_PROFILE_EDIT.md](README_PROFILE_EDIT.md) - Tính năng chỉnh sửa profile 
+**CalculatorPRM** – Chat bí mật, an toàn, tiện lợi, và không ai biết ngoài bạn! 
