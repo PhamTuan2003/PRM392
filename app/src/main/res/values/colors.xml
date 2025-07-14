@@ -7,4 +7,6 @@
     <color name="black">#121212</color>
     <color name="gray_light">#F5F5F5</color>
     <color name="gray_dark">#1E1E1E</color>
+    <color name="calc_button_bg">#f5f5f5</color>
+    <color name="calc_button_text">#222222</color>
 </resources>

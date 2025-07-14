@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MessengerPRM</string>
+    <string name="app_name">CalculatorPRM</string>
     <string name="logout">Logout</string>
     <string name="camera">Camera</string>
     <string name="chat">Chat</string>

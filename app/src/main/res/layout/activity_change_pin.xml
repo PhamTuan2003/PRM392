@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/oldPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã PIN cũ"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/newPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mã PIN mới"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/confirmPin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Xác nhận mã PIN mới"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu mã PIN mới"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset về mặc định (1234)" />
+
+</LinearLayout> 

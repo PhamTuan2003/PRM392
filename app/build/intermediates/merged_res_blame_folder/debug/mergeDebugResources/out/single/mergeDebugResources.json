@@ -1,5 +1,13 @@
 [
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_splash.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_splash.xml"
     },
@@ -44,12 +52,36 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\man.png"
     },
     {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_calculator.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_calculator.xml"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_chatback.png.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\chatback.png"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_black.ttf.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_black.ttf"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -68,6 +100,10 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-night\\chat_bg.xml"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_spartan_bold.otf.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\spartan_bold.otf"
     },
@@ -84,6 +120,10 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_sendbut.png.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\sendbut.png"
     },
@@ -92,28 +132,40 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_register.xml"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_settingback.png.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\settingback.png"
-    },
-    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_search.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_search.xml"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_bold.ttf.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_bold.ttf"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_settingback.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\settingback.png"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_camera.png.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\camera.png"
     },
     {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\poppins_bold.ttf"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_checked.png.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\checked.png"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-hdpi/ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -130,6 +182,10 @@
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -150,6 +206,10 @@
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_scheduled_messages.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_scheduled_messages.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_change_pin.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\activity_change_pin.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_poppins_italic.ttf.flat",
@@ -180,12 +240,16 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\receiver_layout.xml"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_rounded_edittext.xml.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\rounded_edittext.xml"
+        "merged": "com.example.messengerprm.app-debug-54:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.messengerprm.app-main-56:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.messengerprm.app-debug-54:/layout_activity_chat_win.xml.flat",
-        "source": "com.example.messengerprm.app-main-56:/layout/activity_chat_win.xml"
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_calc_button_bg.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\calc_button_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_rounded_edittext.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\rounded_edittext.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_sender_layout.xml.flat",
@@ -196,6 +260,10 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_gallery.xml"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -204,12 +272,12 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_camera.xml.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_camera.xml"
-    },
-    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_bhu.ttf.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\bhu.ttf"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_camera.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_camera.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_schedule.xml.flat",
@@ -240,8 +308,16 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bottom_bar_bg.xml"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\font_spartan_regular.otf.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\spartan_regular.otf"
+    },
+    {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_settone.png.flat",
@@ -252,12 +328,12 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\fthree.png"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_mainback.png.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\mainback.png"
-    },
-    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_user_item.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\user_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_mainback.png.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\mainback.png"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_activity_main.xml.flat",
@@ -282,6 +358,14 @@
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bg_calc_button_func.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bg_calc_button_func.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bg_calc_button_orange.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bg_calc_button_orange.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_sender_layout.xml.flat",
@@ -332,20 +416,20 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\sender_shape.xml"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_activity_chat_win.xml.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\activity_chat_win.xml"
-    },
-    {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_close.xml.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_close.xml"
-    },
-    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_shapedialog.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\shapedialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_ic_close.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\ic_close.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout-night_activity_chat_win.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout-night\\activity_chat_win.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_chat.png.flat",
@@ -356,12 +440,12 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\two.png"
     },
     {
-        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_dialog_change_password.xml.flat",
-        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\dialog_change_password.xml"
-    },
-    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_sett.png.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable-xhdpi\\sett.png"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_dialog_change_password.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\layout\\dialog_change_password.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable-xhdpi_ftwo.png.flat",
@@ -372,8 +456,16 @@
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\font\\dancing.ttf"
     },
     {
+        "merged": "com.example.messengerprm.app-debug-54:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.messengerprm.app-main-56:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\anim_bottom_animation.xml.flat",
         "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\anim\\bottom_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\drawable_bg_calc_button_white.xml.flat",
+        "source": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-main-56:\\drawable\\bg_calc_button_white.xml"
     },
     {
         "merged": "C:\\Users\\lvha0\\.gradle\\daemon\\8.13\\com.example.messengerprm.app-debug-54:\\layout_item_scheduled_message.xml.flat",
