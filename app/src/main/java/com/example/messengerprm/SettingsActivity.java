@@ -225,6 +225,7 @@ public class SettingsActivity extends AppCompatActivity {
         
         TextInputEditText etNewPassword = dialogView.findViewById(R.id.etNewPassword);
         TextInputEditText etConfirmPassword = dialogView.findViewById(R.id.etConfirmPassword);
+        TextInputEditText etOldPassword = dialogView.findViewById(R.id.etOldPassword);
         TextInputEditText etEmailDisplay = dialogView.findViewById(R.id.etEmailDisplay);
         Button btnCancelPassword = dialogView.findViewById(R.id.btnCancelPassword);
         Button btnSavePassword = dialogView.findViewById(R.id.btnSavePassword);
@@ -235,38 +236,45 @@ public class SettingsActivity extends AppCompatActivity {
         
         btnCancelPassword.setOnClickListener(v -> dialog.dismiss());
         btnSavePassword.setOnClickListener(v -> {
+            String oldPassword = etOldPassword.getText().toString().trim();
             String newPassword = etNewPassword.getText().toString().trim();
             String confirmPassword = etConfirmPassword.getText().toString().trim();
-            
+            boolean hasError = false;
+            if (TextUtils.isEmpty(oldPassword)) {
+                etOldPassword.setError(getString(R.string.old_password_required));
+                hasError = true;
+            }
             if (TextUtils.isEmpty(newPassword)) {
                 etNewPassword.setError(getString(R.string.password_required));
-                return;
-            }
-            if (newPassword.length() < 6) {
+                hasError = true;
+            } else if (newPassword.length() < 6) {
                 etNewPassword.setError(getString(R.string.password_too_short));
-                return;
+                hasError = true;
             }
             if (!newPassword.equals(confirmPassword)) {
                 etConfirmPassword.setError(getString(R.string.password_not_match));
-                return;
+                hasError = true;
             }
-            
-            String currentUid = auth.getCurrentUser().getUid();
-            DatabaseReference userRef = database.getReference().child("user").child(currentUid);
-            userRef.child("password").setValue(newPassword);
-            
-            auth.getCurrentUser().updatePassword(newPassword)
-                .addOnCompleteListener(authTask -> {
-                    if (authTask.isSuccessful()) {
-                        Toast.makeText(SettingsActivity.this, getString(R.string.password_updated), Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
-                    } else {
-                        Toast.makeText(SettingsActivity.this, 
-                            "Cập nhật mật khẩu thành công nhưng có lỗi với Firebase Auth!", 
-                            Toast.LENGTH_LONG).show();
-                        dialog.dismiss();
-                    }
-                });
+            if (hasError) return;
+            // Re-authenticate user with old password
+            String email = etEmailDisplay.getText().toString().trim();
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            com.google.firebase.auth.AuthCredential credential = com.google.firebase.auth.EmailAuthProvider.getCredential(email, oldPassword);
+            auth.getCurrentUser().reauthenticate(credential).addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    auth.getCurrentUser().updatePassword(newPassword)
+                        .addOnCompleteListener(updateTask -> {
+                            if (updateTask.isSuccessful()) {
+                                Toast.makeText(SettingsActivity.this, getString(R.string.password_updated), Toast.LENGTH_SHORT).show();
+                                dialog.dismiss();
+                            } else {
+                                etNewPassword.setError(getString(R.string.password_update_error));
+                            }
+                        });
+                } else {
+                    etOldPassword.setError(getString(R.string.old_password_wrong));
+                }
+            });
         });
         
         dialog.show();

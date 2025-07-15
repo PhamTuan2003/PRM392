@@ -12,7 +12,7 @@
         android:text="Lên lịch tin nhắn"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="@color/white"
+        android:textColor="?android:textColorPrimary"
         android:gravity="center"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/poppins_regular" />
@@ -25,8 +25,8 @@
         android:background="@drawable/rounded_edittext"
         android:padding="15dp"
         android:layout_marginBottom="15dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="?android:textColorPrimary"
+        android:textColorHint="?android:textColorSecondary"
         android:alpha="0.8"
         android:fontFamily="@font/poppins_regular" />
 
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Thời gian gửi:"
-        android:textColor="@color/white"
+        android:textColor="?android:textColorPrimary"
         android:textSize="14sp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/poppins_regular" />
@@ -52,8 +52,8 @@
             android:layout_weight="1"
             android:text="Chọn ngày"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/rounded_button"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/blue_200"
+            android:textColor="?android:textColorPrimary"
             android:fontFamily="@font/poppins_regular" />
 
         <Button
@@ -63,8 +63,8 @@
             android:layout_weight="1"
             android:text="Chọn giờ"
             android:layout_marginStart="5dp"
-            android:background="@drawable/rounded_button"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/blue_200"
+            android:textColor="?android:textColorPrimary"
             android:fontFamily="@font/poppins_regular" />
 
     </LinearLayout>
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Chưa chọn thời gian"
-        android:textColor="@color/white"
+        android:textColor="?android:textColorSecondary"
         android:textSize="12sp"
         android:gravity="center"
         android:layout_marginBottom="20dp"
@@ -92,7 +92,7 @@
             android:layout_weight="1"
             android:text="Hủy"
             android:layout_marginEnd="5dp"
-            android:background="@drawable/rounded_button_cancel"
+            android:backgroundTint="@color/gray_dark"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_regular" />
 
@@ -103,7 +103,7 @@
             android:layout_weight="1"
             android:text="Lên lịch"
             android:layout_marginStart="5dp"
-            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/blue_500"
             android:textColor="@color/white"
             android:fontFamily="@font/poppins_regular" />
 

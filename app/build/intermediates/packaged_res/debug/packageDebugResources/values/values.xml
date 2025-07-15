@@ -3,6 +3,8 @@
     <color name="black">#121212</color>
     <color name="blue_200">#90CAF9</color>
     <color name="blue_500">#2196F3</color>
+    <color name="calc_button_bg">#f5f5f5</color>
+    <color name="calc_button_text">#222222</color>
     <color name="gray_dark">#1E1E1E</color>
     <color name="gray_light">#F5F5F5</color>
     <color name="teal_200">#03DAC5</color>
@@ -30,12 +32,27 @@
     <dimen name="_7sdp">7dp</dimen>
     <dimen name="_80sdp">80dp</dimen>
     <dimen name="_91sdp">91dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+    <dimen name="no_friends_margin_top">32dp</dimen>
+    <dimen name="no_friends_text_size">16sp</dimen>
+    <dimen name="recycler_margin_side">8dp</dimen>
+    <dimen name="recycler_margin_top">8dp</dimen>
+    <dimen name="search_height">40dp</dimen>
+    <dimen name="search_margin_top">8dp</dimen>
+    <dimen name="search_padding_end">12dp</dimen>
+    <dimen name="search_padding_start">36dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_icon_margin_end">10dp</dimen>
+    <dimen name="toolbar_icon_size">28dp</dimen>
+    <dimen name="toolbar_text_margin_start">16dp</dimen>
+    <dimen name="toolbar_text_size">20sp</dimen>
     <string name="accept">Chấp nhận</string>
     <string name="accept_button">Chấp nhận</string>
     <string name="accept_friend_success">Đã chấp nhận kết bạn!</string>
     <string name="add_friend">Kết bạn</string>
     <string name="add_friend_button">Kết bạn</string>
-    <string name="app_name">MessengerPRM</string>
+    <string name="app_name">CalculatorPRM</string>
     <string name="camera">Camera</string>
     <string name="cancel">Hủy</string>
     <string name="change_avatar">Đổi avatar</string>
@@ -67,6 +84,9 @@
     <string name="no_messages">Chưa có tin nhắn</string>
     <string name="no_name">Chưa có tên</string>
     <string name="no_users_found">Không tìm thấy người dùng nào</string>
+    <string name="old_password">Mật khẩu cũ</string>
+    <string name="old_password_required">Vui lòng nhập mật khẩu cũ</string>
+    <string name="old_password_wrong">Mật khẩu cũ không đúng</string>
     <string name="password_not_match">Mật khẩu xác nhận không khớp</string>
     <string name="password_required">Mật khẩu không được để trống</string>
     <string name="password_too_short">Mật khẩu phải có ít nhất 6 ký tự</string>
@@ -98,6 +118,29 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="android:textColorPrimary">@color/black</item>
+    </style>
+    <style name="CalcButton">
+    </style>
+    <style name="CalcButtonEqual">
+        <item name="android:background">@drawable/bg_calc_button_orange</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+    <style name="CalcButtonFunc">
+        <item name="android:background">@drawable/bg_calc_button_func</item>
+        <item name="android:textColor">#FF9800</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+    <style name="CalcButtonWhite">
+        <item name="android:background">@drawable/bg_calc_button_white</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_margin">6dp</item>
     </style>
     <style name="Theme.MessengerPRM" parent="Base.Theme.MessengerPRM"/>
 </resources>

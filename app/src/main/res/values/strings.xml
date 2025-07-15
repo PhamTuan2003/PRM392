@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MessengerPRM</string>
+    <string name="app_name">CalculatorPRM</string>
     <string name="logout">Logout</string>
     <string name="camera">Camera</string>
     <string name="chat">Chat</string>
@@ -55,4 +55,7 @@
     <string name="accept_button">Chấp nhận</string>
     <string name="reject_button">Hủy</string>
     <string name="reject_friend_success">Đã từ chối lời mời kết bạn!</string>
+    <string name="old_password">Mật khẩu cũ</string>
+    <string name="old_password_required">Vui lòng nhập mật khẩu cũ</string>
+    <string name="old_password_wrong">Mật khẩu cũ không đúng</string>
 </resources>

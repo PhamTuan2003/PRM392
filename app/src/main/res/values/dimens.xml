@@ -23,4 +23,19 @@
     <dimen name="_215sdp">215dp</dimen>
     <dimen name="_250sdp">250dp</dimen>
     <dimen name="_260sdp">260dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="toolbar_text_margin_start">16dp</dimen>
+    <dimen name="toolbar_text_size">20sp</dimen>
+    <dimen name="toolbar_icon_size">28dp</dimen>
+    <dimen name="toolbar_icon_margin_end">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+    <dimen name="search_height">40dp</dimen>
+    <dimen name="search_margin_top">8dp</dimen>
+    <dimen name="search_padding_start">36dp</dimen>
+    <dimen name="search_padding_end">12dp</dimen>
+    <dimen name="no_friends_margin_top">32dp</dimen>
+    <dimen name="no_friends_text_size">16sp</dimen>
+    <dimen name="recycler_margin_top">8dp</dimen>
+    <dimen name="recycler_margin_side">8dp</dimen>
 </resources>

@@ -66,7 +66,7 @@
             android:name="com.example.messengerprm.login"
             android:exported="false" />
         <activity
-            android:name="com.example.messengerprm.splash"
+            android:name="com.example.messengerprm.CalculatorActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -74,6 +74,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.messengerprm.ChangePinActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.messengerprm.splash"
+            android:exported="true" />
         <activity
             android:name="com.example.messengerprm.MainActivity"
             android:exported="false" />

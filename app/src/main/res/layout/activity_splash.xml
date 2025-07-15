@@ -27,7 +27,7 @@
         android:fontFamily="@font/apptext"
         android:gravity="center"
         android:textSize="30sp"
-        android:text="Messenger"
+        android:text="Calculator PRM"
         android:textColor="?android:textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
